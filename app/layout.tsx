@@ -11,7 +11,7 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
+    default: 'Leticia @levxyca',
     template: '%s | Next.js Portfolio Starter',
   },
   description: 'This is my portfolio.',
@@ -52,6 +52,9 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
+      <head>
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
