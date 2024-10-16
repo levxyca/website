@@ -1,0 +1,39 @@
+---
+title: 'Pra não esquecer mais: Stateless x Stateful no Flutter'
+publishedAt: '2023-02-14'
+summary: 'Prazer, eu sou a [**Leticia @levxyca**](https://links.levxyca.com/) e estou em busca de me tornar a maga do Flutter, ou a Flutterfly 🦋 Hoje eu estou aqui escrevendo sobre Stateless e Stateful no Flutter para não me esquecer mais, ou tentar pelo menos rs.'
+---
+
+Se você caiu aqui de paraquedas e não sabe do que eu estou falando, recomendo você começar lendo esse [artigo da Maiza Louise que explica “O que é Flutter?”.](https://www.linkedin.com/pulse/o-que-%C3%A9-flutter-maiza-louise/)
+
+Prazer, eu sou a [**Leticia @levxyca**](https://links.levxyca.com/) e estou em busca de me tornar a maga do Flutter, ou a Flutterfly 🦋 Hoje eu estou aqui escrevendo sobre Stateless e Stateful no Flutter para não me esquecer mais, ou tentar pelo menos rs.
+
+## Stateless Widget
+
+Um *Stateless Widget* é um widget sem controle de estado. Mas o que isso significa? Significa que esse tipo de widget não tem alterações dinâmicas, ou seja, as informações ali são estáticas, não mudam ao longo do processo.
+
+```dart
+class WidgetExample extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+```
+
+## Stateful Widget
+
+Agora falando sobre o *Stateful Widget*, é um widget com controle de estado. O que significa que podemos ter infomações que se alteram ao longo do processo, ou seja, é com ele que conseguimos construir várias coisas interativas.
+
+```dart
+class WidgetExample extends StatefulWidget {
+  const WidgetExample({super.key});
+
+  @override
+  State<WidgetExample> createState() => _WidgetExample();
+}
+```
+
+## Ficou um pouco mais lúcido agora?
+
+Espero que sim! Esses são conceitos muito importantes na hora de criar nossas aplicações utilizando Flutter 💙 Se você tem alguma outra forma de definir esses conceitos, fique a vontade para comentar aqui em baixo!

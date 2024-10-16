@@ -1,0 +1,81 @@
+---
+title: 'Descomplicando o uso do GitHub: um guia simples para pessoas leigas'
+publishedAt: '2020-10-01'
+summary: 'O intuito desse texto é ajudar quem, por algum motivo, não tenha tempo ou não queira usar linhas de comando. Também é válido caso você queira contribuir com projetos de código aberto que utilizam o Github mas não faça parte da área de tecnologia.'
+---
+
+O intuito desse texto é ajudar quem, por algum motivo, não tenha tempo ou não queira usar linhas de comando. Também é válido caso você queira contribuir com projetos de código aberto que utilizam o GitHub, mas não faça parte da área de tecnologia.
+
+Primeiramente, uma breve introdução. **O que é Git?** Git é um sistema de controle de versões distribuído, usado principalmente no desenvolvimento de software, mas pode ser usado para registrar o histórico de edições de qualquer tipo de arquivo.
+
+O GitHub consegue armazenar códigos-fonte utilizando o controle de versão do Git e isso permite que qualquer pessoa contribua com projetos, sejam eles privados ou de código aberto.
+
+Nesse artigo, irei demonstrar como utilizar o GitHub Desktop, mas caso você queira se aprofundar e entender mais como usá-lo via linha de comando, eu tenho [esse repositório](https://github.com/levxyca/docs) que contém [meus resumos de Git e GitHub](https://docs.levxyca.com/versionamento/github/), que, inclusive, é um dos lugares que estou me baseando para escrever isso.
+
+Para poder acompanhar esse tutorial, você vai precisar [baixar o Git](https://git-scm.com/downloads) e instalar ele na sua máquina. Caso tenha alguma dificuldade em fazer isso, você pode tirar sua dúvida comigo ou pesquisar algum tutorial na internet ensinando a como fazer, o que é bem tranquilo. Depois, você vai acessar o [site do GitHub](https://github.com/) e criar uma conta. Após criar sua conta, você vai [baixar o GitHub Desktop](https://desktop.github.com/) e instalar ele também. Por fim, você irá abrir o GitHub Desktop e logar na sua conta.
+
+## Como criar um repositório?
+
+Com o GitHub Desktop aberto, você irá clicar em **File** e depois em **New repository...**
+
+![Criar repositório](https://raw.githubusercontent.com/levxyca/git-para-leigos/main/imagens%20ilustrativas/git-1.png)
+
+Uma janela irá se abrir. Em **name**, você irá colocar o nome do seu repositório; em **description**, você pode adicionar uma pequena descrição sobre o que é esse repositório que está sendo criado. Em **local path**, você pode alterar onde vai ficar salva a pasta local do seu repositório. Como esse é um tutorial para quem tem pressa, ignoraremos a parte de criar um **README**, adicionar um **gitignore** e adicionar uma **licença**. Entretanto, caso queira saber mais sobre o que são essas coisas, você pode [acessar aqui](https://gist.github.com/levxyca/7d2889b3b4353cd8dbdbf0e0e00383b3). Por fim, é só clicar em **Create repository...**
+
+![Criar repositório - passo 2](https://raw.githubusercontent.com/levxyca/git-para-leigos/main/imagens%20ilustrativas/git-2.png)
+
+## Fazendo alterações no seu repositório
+
+Tadaaa 🥳, agora você tem um repositório local criado através do GitHub Desktop. Agora você pode adicionar qualquer coisa no seu repositório. Vamos usar de exemplo um arquivo .txt que criei no Bloco de Notas do Windows para guardar links que eu acho importantes. Mas poderiam ser imagens, códigos etc. A intenção é apenas mostrar que você pode adicionar e remover coisas no seu repositório.
+
+![Adicionando arquivo](https://raw.githubusercontent.com/levxyca/git-para-leigos/main/imagens%20ilustrativas/git-3.png)
+
+Na imagem acima, vocês podem ver que adicionei um arquivo .txt na pasta que criamos para o nosso repositório. Agora, se você for olhar no GitHub Desktop, irá perceber que as coisas adicionadas irão aparecer lá. No entanto, elas não ficam salvas automaticamente. Para você salvar essas alterações, você precisa dar um **commit**. Commit é você salvar uma nova versão do seu banco de dados local no seu Git. Para isso, basta digitar um nome curto que descreva o que você fez na primeira caixa e, em seguida, clicar em **commit to main.**
+
+![Fazendo commit](https://raw.githubusercontent.com/levxyca/git-para-leigos/main/imagens%20ilustrativas/git-4.png)
+
+Seguindo esse ciclo, você consegue fazer alterações no seu repositório, adicionar ou remover coisas e deixar tudo salvo localmente com o Git. Ok, mas e se eu quiser salvar isso remotamente, como fazer?
+
+## Deixando o seu repositório salvo de forma remota com o GitHub
+
+Para publicar o seu repositório no GitHub, basta clicar em **Publish repository...**
+
+![Publicando repositório](https://raw.githubusercontent.com/levxyca/git-para-leigos/main/imagens%20ilustrativas/git-5.png)
+
+Você pode marcar a caixa **"Keep this code private"** caso queira deixar o seu repositório privado. Eu vou deixar desmarcado, pois quero que o repositório fique público.
+
+![Configurações de publicação](https://raw.githubusercontent.com/levxyca/git-para-leigos/main/imagens%20ilustrativas/git-6.png)
+
+Pronto, agora o seu repositório está salvo remotamente! Você pode acessá-lo no site do GitHub e, caso tenha deixado ele público, outras pessoas também poderão acessá-lo. Você pode clicar [aqui](https://github.com/levxyca/git-para-leigos) para acessar o repositório criado de exemplo para esse artigo.
+
+## Contribuindo com um projeto de código aberto que já existe
+
+Para fazer isso, você vai acessar o link do repositório que você quer contribuir e irá clicar no botão "**Fork**". O fork pega o repositório completo e faz uma cópia para sua conta.
+
+![Forkando repositório](https://raw.githubusercontent.com/levxyca/git-para-leigos/main/imagens%20ilustrativas/git-7.png)
+
+Após terminar o fork, você vai abrir o GitHub Desktop, clicar em **Files** e depois em **Clone repository...**
+
+![Clonando repositório](https://raw.githubusercontent.com/levxyca/git-para-leigos/main/imagens%20ilustrativas/git-8.png)
+
+Ali na primeira caixa, você consegue pesquisar pelo nome do repositório que você deu fork. Esses repositórios têm o símbolo que está destacado em vermelho. Após achar o repositório que você criou o fork e selecioná-lo, você irá clicar em clone para baixá-lo na sua máquina.
+
+## Criando o meu primeiro PR
+
+Depois de ter feito clone, você precisará criar uma nova branch para fazer alterações no projeto. Branch é uma ramificação no projeto que permite que funcionalidades sejam desenvolvidas separadamente sem impactar funcionalidades estáveis no projeto.
+
+Para criar a nova branch, basta clicar em **branch** e depois em **new branch**. Irá surgir uma janela onde você irá colocar o nome da nova branch e, logo em seguida, é só clicar em **create branch**.
+
+![Criando nova branch](https://raw.githubusercontent.com/levxyca/git-para-leigos/main/imagens%20ilustrativas/git-9.png)
+
+Após isso, você pode fazer as alterações normalmente no repositório. Após finalizar as alterações que você queria, você precisa dar o commit e publicar a branch, como já foi ensinado.
+
+Depois de ter feito esses passos, vai aparecer para você a opção de criar um pull request, que é uma requisição de mudança que você cria. Ou seja, você pede para que essas mudanças sejam integradas à branch master daquele projeto. No caso, alguém irá revisar e autorizar antes de mesclar, assim evitando erros. Merge é você colocar uma branch na branch master, ou seja, implementar para o usuário final.
+
+Para dar o seu PR, basta clicar em **Create Pull Request...**
+
+![Criando Pull Request](https://raw.githubusercontent.com/levxyca/git-para-leigos/main/imagens%20ilustrativas/git-10.png)
+
+Pronto! Você criou o seu primeiro PR, agora basta aguardar o dono do repositório aceitar ele.
+
+Eu espero que esse artigo tenha ajudado você de alguma forma. Muito obrigado por ler até o fim. Caso encontre algum erro ou tenha alguma sugestão de melhoria, fique à vontade para me passar o seu feedback.

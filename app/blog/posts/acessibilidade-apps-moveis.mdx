@@ -1,0 +1,89 @@
+---
+title: 'Desvendando a acessibilidade dos aplicativos móveis: descubra como testá-la.'
+publishedAt: '2023-08-01'
+summary: 'Quando começamos a nos preocupar com a acessibilidade dentro dos aplicativos móveis, podem surgir muitas dúvidas sobre como testar nossa aplicação para garantir que ela esteja realmente acessível.'
+---
+
+Quando começamos a nos preocupar com a acessibilidade dentro dos aplicativos móveis, podem surgir muitas dúvidas sobre como testar nossa aplicação para garantir que ela esteja realmente acessível.
+
+Aqui, você encontrará algumas dicas de como realizar esses testes e garantir que sua aplicação possa ser utilizada por todas as pessoas.
+
+Como minha experiência na tecnologia está atualmente concentrada no Flutter, trouxe dicas pensando nessa tecnologia, mas essa lista também pode ser usada para aplicativos móveis construídos em qualquer tecnologia.
+
+## Lista de verificação de acessibilidade para aplicativos
+
+A acessibilidade em aplicativos móveis é essencial para garantir que todas as pessoas possam utilizar o software de forma eficiente e sem barreiras. Abaixo, você encontrará uma lista de verificação de acessibilidade que ajudará você a tornar o seu aplicativo mais inclusivo:
+
+> Informações encontradas na documentação do Flutter em [Accessibility release checklist](https://docs.flutter.dev/accessibility-and-localization/accessibility?tab=desktop#accessibility-release-checklist)
+
+- **Interações ativas**: verifique se todas as ações interativas realizam alguma função. Certifique-se de que os botões façam algo quando pressionados. Por exemplo, se você tem um botão que não faz nada quando pressionado, altere-o para mostrar uma mensagem explicando o que aconteceu.
+- **Leitor de tela**: o leitor de tela deve ser capaz de descrever todos os controles na página quando você toca neles, e as descrições devem ser compreensíveis. Teste seu aplicativo com o [TalkBack](https://support.google.com/accessibility/android/answer/6007100?hl=pt-BR) (Android) e o [VoiceOver](https://support.apple.com/pt-br/guide/iphone/iph3e2e415f/ios) (iOS).
+- **Relação de contraste**: verifique se existe um contraste adequado entre os controles e o plano de fundo. Certifique-se de que a relação de contraste seja de pelo menos 4,5:1 para garantir a legibilidade. Isso é especialmente importante para pessoas com dificuldades de visão.
+- **Troca de contexto**: nada deve mudar automaticamente o contexto do usuário enquanto ele digita informações. Mudanças bruscas podem confundir o usuário. Sempre forneça confirmação ou aviso antes de fazer alterações importantes.
+- **Alvos tocáveis**: todos os alvos tocáveis devem ter pelo menos 48x48 pixels. Isso torna mais fácil para as pessoas usuárias tocarem os elementos na tela.
+- **Erros**: garanta que ações importantes possam ser desfeitas. Se houver erros, forneça sugestões de correção sempre que possível, para ajudar os usuários a resolverem problemas.
+- **Inversão de cores e escala de cinza**: os controles devem ser utilizáveis e legíveis nos modos de visão de cores deficientes e em escala de cinza.
+- **Fatores de escala**: a interface do usuário deve permanecer legível e utilizável mesmo em tamanhos de texto muito grandes ou em escalas de exibição diferentes.
+
+## Testes automatizados: simplificando a verificação de acessibilidade
+
+Testes automatizados são procedimentos de verificação de software executados automaticamente por programas de computador, em vez de serem feitos manualmente por pessoas. Eles garantem que um programa ou aplicativo funcionem corretamente, identificando erros e falhas de forma eficiente.
+
+Ao seguir um conjunto de instruções pré-programadas, esses testes verificam se todas as partes do software estão trabalhando adequadamente. Caso algum problema seja encontrado, as pessoas desenvolvedoras podem corrigi-lo antes que o software seja entregue ass pessoas que vão utilizá-lo, assegurando uma melhor qualidade e confiabilidade do produto final.
+
+Em resumo, os testes automatizados são uma ferramenta valiosa no desenvolvimento de software, pois ajudam a garantir a funcionalidade adequada do programa e a identificar problemas de forma rápida e sistemática, economizando tempo e esforço de quem desenvolve e melhorando a experiência de quem utiliza.
+
+### Accessibility Scanner
+
+Podemos testar alguns dos itens da lista de verificação de acessibilidade de forma automatizada no android usando o [Accessibility Scanner](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor&hl=en).
+
+O Accessibility Scanner é uma ferramenta que analisa a interface de um aplicativo e fornece recomendações sobre como melhorar sua acessibilidade.
+
+O Accessibility Scanner permite que qualquer pessoa, não apenas pessoas desenvolvedoras, identifiquem, rapidamente e facilmente, uma série de melhorias comuns de acessibilidade; como, por exemplo, aumentar o tamanho de alvos de toque pequenos, aumentar o contraste para texto e imagens e fornecer descrições de conteúdo para elementos gráficos sem rótulo.
+
+### Teste seu aplicativo usando a API de Diretrizes de Acessibilidade do Flutter
+
+Essa API é uma ferramenta muito útil no Flutter para verificar se a interface do seu aplicativo é acessível para todas as pessoas. As recomendações de acessibilidade incluem coisas como contraste de texto, tamanho adequado dos botões e etiquetas claras para os elementos interativos.
+
+Com o uso da classe [AccessibilityGuideline class](https://api.flutter.dev/flutter/flutter_test/AccessibilityGuideline-class.html), você pode descrever quais recomendações o seu aplicativo deve seguir para ser considerado acessível. E com o método [meetsGuideline](https://api.flutter.dev/flutter/flutter_test/meetsGuideline.html), é possível testar se a tela do aplicativo atende a essas diretrizes de acessibilidade. Dessa forma, você torna o seu aplicativo mais inclusivo, possibilitando que todas as pessoas possam utilizá-lo de forma mais fácil e eficiente.
+
+#### Diretrizes de acessibilidade suportadas
+
+- [androidTapTargetGuideline](https://api.flutter.dev/flutter/flutter_test/androidTapTargetGuideline-constant.html): para seguir as diretrizes mínimas de área tocável no Android.
+- [iOSTapTargetGuideline](https://api.flutter.dev/flutter/flutter_test/iOSTapTargetGuideline-constant.html): para seguir as diretrizes mínimas de área tocável no iOS.
+- [textContrastGuideline](https://api.flutter.dev/flutter/flutter_test/textContrastGuideline-constant.html): para seguir as diretrizes mínimas de contraste de texto do WCAG (Web Content Accessibility Guidelines).
+- [labeledTapTargetGuideline](https://api.flutter.dev/flutter/flutter_test/labeledTapTargetGuideline-constant.html): para garantir que áreas tocáveis tenham etiquetas ou rótulos associados.
+
+## Testes manuais: explorando a acessibilidade de forma prática
+
+Testes manuais para aplicativos de celular são verificações feitas por pessoas para garantir que o aplicativo funcione corretamente em diferentes dispositivos e situações. Durante esses testes, os examinadores exploram o aplicativo, interagindo com suas funções, como se fossem usuários reais, para verificar se tudo está funcionando corretamente.
+
+### Use o aplicativo com os recursos de acessibilidade ativados
+
+Uma forma interessante de realizar esses testes é usar o próprio dispositivo com os recursos de acessibilidade ativados. Isso ajuda a entender como a aplicação se comporta em diferentes cenários. Alguns recursos de acessibilidade que você pode testar são o zoom da tela, o tamanho da fonte, a escala de cinza e temas de alto contraste. Essas verificações garantem que o aplicativo seja amigável para todas as pessoas e que a experiência seja a melhor possível.
+
+### Leitores de tela para celular
+
+Testar a acessibilidade de um aplicativo de celular usando um leitor de tela manualmente é uma maneira importante de garantir que o aplicativo seja inclusivo e amigável para pessoas com deficiência visual. Um leitor de tela é uma ferramenta que converte o texto e os elementos da interface em voz ou Braille, permitindo que pessoas cegas ou com baixa visão interajam com o aplicativo. Veja como você pode realizar esse tipo de teste de forma didática:
+
+- **Preparação**: Antes de começar, certifique-se de ter um dispositivo móvel e um leitor de tela instalado nele. Para dispositivos iOS, o [VoiceOver](https://www.apple.com/lae/accessibility/vision/) está disponível, e para dispositivos Android, você pode usar o [Talkback](https://support.google.com/accessibility/android/answer/6283677?hl=en). Ative o leitor de tela nas configurações de acessibilidade do dispositivo.
+
+- **Explorando a interface**: abra o aplicativo e comece a explorar a interface com o leitor de tela ativado. O leitor de tela vai ler os elementos na tela à medida que você navega. Preste atenção em como as informações são apresentadas e se todas as partes da interface são identificadas corretamente.
+
+- **Navegação**: teste a navegação pelo aplicativo usando o leitor de tela. Verifique se é fácil encontrar e interagir com os diferentes elementos, como botões, campos de entrada e links. Garanta que o leitor de tela anuncie claramente o propósito de cada elemento.
+
+- **Legibilidade**: verifique se o leitor de tela lê o conteúdo de texto de forma clara e compreensível. Certifique-se de que todas as informações importantes, como mensagens de erro ou avisos, sejam lidas corretamente.
+
+- **Imagens**: verifique se o leitor de tela descreve corretamente as imagens.
+
+- **Funcionalidades acessíveis**: teste todas as funcionalidades do aplicativo com o leitor de tela ativado. Isso inclui preenchimento de formulários, seleção de opções em menus e interação com elementos dinâmicos.
+
+- **Feedback auditivo**: observe se o aplicativo fornece feedback auditivo adequado ao realizar ações, como pressionar um botão ou concluir uma tarefa.
+
+- **Facilidade de uso**: avalie a facilidade de uso do aplicativo com o leitor de tela. Seja sensível à experiência do usuário e busque identificar possíveis pontos de melhoria.
+
+Ao realizar esses testes manualmente com o leitor de tela, você estará assegurando que seu aplicativo é acessível e inclusivo para pessoas com deficiência visual, proporcionando a elas uma experiência positiva e agradável durante a utilização do aplicativo.
+
+---
+
+Gostou das dicas? 💖 Quero saber a sua opinião! Se tiver mais alguma dica para compartilhar, não hesite em deixá-la nos comentários abaixo. 🌟

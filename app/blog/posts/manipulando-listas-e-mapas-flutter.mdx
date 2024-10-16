@@ -1,0 +1,225 @@
+---
+title: 'Manipulando listas e mapas no Flutter'
+publishedAt: '2023-11-06'
+summary: 'Manipulando listas e mapas no Flutter'
+---
+
+<aside>
+🚨 *Você pode copiar esses exemplos e utilizá-los no [Dartpad](https://dartpad.dev/) para testar e observar o funcionamento de cada um dos métodos.*
+
+</aside>
+
+## Listas em Flutter
+
+As listas são estruturas de dados que permitem armazenar valores em uma sequência ordenada. Em outras palavras, você pode pensar nelas como uma coleção de itens numerados. Em muitas outras linguagens de programação, as listas são chamadas de "arrays".
+
+```dart
+void main() {
+// Criando uma lista de números
+  List<int> numbers = [1, 2, 3, 4, 5];
+  print(numbers);
+
+// Adicionando um elemento à lista
+  numbers.add(6);
+  print(numbers);
+
+// Adicionando vários elementos à lista
+  List<int> newNumbers = [7, 8, 9, 10];
+  numbers.addAll(newNumbers);
+  print(numbers);
+
+  // Removendo um elemento da lista
+  numbers.remove(2);
+  print(numbers);
+  
+  // Removendo um item da lista pela sua posição
+  numbers.removeAt(0);
+  print(numbers);
+  
+  // Obtendo o comprimento da lista
+  print(numbers.length);
+}
+```
+
+### Filtrando uma Lista com `.where`
+
+- Percorre a lista e retorna os elementos que satisfazem uma determinada condição.
+- Não modifica a lista existente, ele retorna uma nova lista contendo os elementos que satisfazem a condição especificada. Portanto, a lista original permanece inalterada.
+
+```dart
+void main() {
+  // Criando uma lista de números
+  List<int> numbers = [1, 2, 3, 4, 5];
+  print(numbers);
+
+  // Filtrando uma lista de acordo com uma condição
+  var numbersFiltered = numbers.where((x) => x < 3);
+  print(numbersFiltered);
+
+  // O que a .where retorna?
+  print(numbersFiltered.runtimeType);
+
+  // Convertendo um Iterable para lista
+  numbersFiltered = numbers.where((x) => x < 3).toList();
+  print(numbersFiltered);
+
+  // O que a .where retorna agora? Uma lista!
+  print(numbersFiltered.runtimeType);
+}
+```
+
+Quando trabalhamos usando o `.where` precisamos nos atendar pois o seu retorno é do tipo **`Iterable<type>`,** ou seja, não conseguimos usar vários métodos específicos das listas aqui. Para resolver isso, usamos o `.toList()` para converter esse `Iterable` em uma lista.
+
+**`List`** é um tipo de coleção ordenada que estende **`Iterable`**, oferecendo operações específicas para lidar com elementos em uma ordem específica. **`Iterable`**, por outro lado, é uma interface mais genérica para lidar com sequências de elementos, mas não tem a mesma garantia de ordem que uma lista.
+
+### Ordenando uma Lista com `.sort`
+
+- O método `.sort` é usado para ordenar os elementos de uma lista com base em um critério específico.
+- Você pode fornecer uma função de comparação personalizada para o **`.sort()`** para ordenar os elementos de acordo com critérios específicos. Isso permite uma flexibilidade maior na ordenação.
+- O **`.sort()`** modifica a lista original e não retorna uma nova lista ordenada. Portanto, tenha cuidado ao usar este método se precisar manter a lista original inalterada.
+
+```dart
+void main() {
+  // Criando uma lista de números
+  List<int> numbers = [5, 2, 8, 1, 9, 3, 7, 6, 4];
+
+  print(numbers);
+
+  // Ordenando a lista em ordem crescente
+  numbers.sort();
+  print(numbers);
+
+  // Usando o método "compareTo"
+  // Ordenando a lista em ordem decrescente
+  numbers.sort((a, b) => b.compareTo(a));
+  print(numbers);
+
+  // Usando um método personalizado para ordenar
+  // Ordenando a lista pelos números pares primeiro, e depois pelos ímpares
+  numbers.sort((a, b) {
+    bool parA = a % 2 == 0;
+    bool parB = b % 2 == 0;
+
+    if (parA && !parB) {
+      return -1; // a vem antes de b (números pares primeiro)
+    } else if (!parA && parB) {
+      return 1; // b vem antes de a (números pares primeiro)
+    } else {
+      return a - b; // se ambos são pares ou ímpares, ordene numericamente
+    }
+  });
+  print(numbers);
+}
+```
+
+## Conjuntos em Flutter
+
+Os conjuntos (sets) são semelhantes às listas, com a diferença de que constituem uma coleção de elementos únicos e não ordenados.
+
+```dart
+void main() {
+	// Criando um conjunto de números
+  Set<int> numbers = {1, 3, 5, 7, 3, 5, 9, 2, 1};
+	// Neste exemplo, estamos criando um conjunto que contém os números inteiros 1, 3, 5, 7, 3 (repetido), 5 (repetido), 9, 2 e 1 (repetido).
+	// Como um conjunto só aceita elementos únicos, as duplicatas serão automaticamente removidas.
+  print(numbers);
+}
+```
+
+A escolha entre usar um **`Set`** ou uma **`List`** no Flutter (ou em qualquer linguagem de programação) depende do que você está tentando realizar com os dados e das características específicas do seu aplicativo.
+
+**Use um `Set` quando**:
+
+1. Você precisa garantir a unicidade dos elementos.
+2. **V**ocê não se importa com a ordem dos elementos.
+
+**Use uma `List` quando**:
+
+1. Você precisa manter a ordem dos elementos.
+2. Você precisa acessar elementos por índice.
+3. Você precisa adicionar ou remover elementos de forma dinâmica.
+
+## Método “.any()”
+
+O método **`any`** no Flutter (e na linguagem Dart, na qual o Flutter é baseado) é uma função associada a coleções (como listas, conjuntos, e outros tipos que implementam o conceito de iteráveis). Sua função é verificar se pelo menos um elemento na coleção satisfaz uma determinada condição, resultando em um retorno de **`true`** caso a condição seja verdadeira para ao menos um elemento, e **`false`** se nenhum elemento cumprir a condição.
+
+```dart
+void main() {
+  // Criando uma lista de números
+  List<int> numbers = [1, 3, 5, 7, 9];
+  // Usando o método "any" e atribuindo o resultado a uma variável
+  bool hasEvenNumber = numbers.any((number) => number % 2 == 0);
+  
+  if (hasEvenNumber) {
+    print("A lista tem números pares.");
+  } else {
+    print("A lista não tem números pares.");
+  }
+}
+```
+
+### Diferença entre o método “any” e o método “where”
+
+- **`any`**: retorna **`true`** se pelo menos um elemento atender à condição.
+- **`where`**: retorna uma nova coleção contendo todos os elementos que atendem à condição.
+
+## Mapas em Flutter
+
+Os mapas funcionam como dicionários, associando chaves a valores. Eles oferecem uma grande flexibilidade em termos de organização de dados.
+
+**Exemplo de Mapa:**
+
+```dart
+void main() {
+  // Criando um mapa de frutas e suas cores
+  Map<String, dynamic> person = {
+    'Name': 'Leticia',
+    'Age': 22,
+  };
+
+  // Adicionando um novo par chave-valor
+  person['Gender'] = 'Female';
+
+  print(person);
+}
+
+```
+
+## Convertendo um mapa em uma lista de objetos
+
+Nesse exemplo, a classe **`Clothing`** é responsável por representar informações sobre peças de roupa. Vamos explorar dois métodos essenciais desta classe: **`fromMap`** e **`fromMaps`**.
+
+Esses métodos são essenciais quando se trabalha com dados provenientes de fontes externas, como APIs ou bases de dados, e facilitam a conversão de mapas em objetos de forma eficaz e organizada.
+
+```dart
+// Classe Clothing
+class Clothing {
+  // ... (atributos e construtores)
+
+  // Converte um mapa em um objeto Clothing
+  Clothing.fromMap(Map<String, dynamic> map)
+      : id = map['id'],
+        title = map['title'],
+        bannerPath = map['banner']['url'],
+        price = double.parse(map['price'] ?? '0');
+
+  // Converte uma lista de mapas em uma lista de objetos Clothing
+  static List<Clothing> fromMaps(List<dynamic> maps) {
+    return maps.map((map) {
+      return Clothing.fromMap(map);
+    }).toList();
+  }
+}
+```
+
+### Método **`fromMap`**
+
+O método **`fromMap`** transforma um mapa em um objeto **`Clothing`**, permitindo a fácil conversão de dados provenientes de fontes externas em instâncias utilizáveis.
+
+Este método utiliza as chaves do mapa para inicializar os atributos **`id`**, **`title`**, **`bannerPath`** e **`price`** da instância de **`Clothing`**.
+
+### Método **`fromMaps`**
+
+O método **`fromMaps`** é estático, o que significa que pertence à classe **`Clothing`** e não a uma instância específica. Ele é utilizado para converter uma lista de mapas em uma lista de objetos **`Clothing`**.
+
+Ele percorre a lista de mapas e, para cada mapa, utiliza o método **`fromMap`** para criar um objeto **`Clothing`**, resultando em uma lista de peças de roupa prontas para serem utilizadas.
