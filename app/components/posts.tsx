@@ -7,14 +7,8 @@ export function BlogPosts() {
   return (
     <div>
       {allBlogs
-        .sort((a, b) => {
-          if (
-            new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-          ) {
-            return -1
-          }
-          return 1
-        })
+        .sort((a, b) => new Date(b.metadata.publishedAt) - new Date(a.metadata.publishedAt)) // Ordena do mais recente para o mais antigo
+        .slice(0, 3) // Pega apenas os três primeiros posts
         .map((post) => (
           <Link
             key={post.slug}
