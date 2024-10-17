@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   },
   description: 'This is my portfolio.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Leticia @levxyca',
+    description: 'Criando conexões genuínas, capacitando pessoas e promovendo comunidades tecnológicas diversas e inclusivas.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Leticia @levxyca',
     locale: 'en_US',
     type: 'website',
   },

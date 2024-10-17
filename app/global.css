@@ -1,17 +1,17 @@
 @import 'tailwindcss';
 
 ::selection {
-  background-color: #5F4B64; /* Cor de destaque */
-  color: #FFF6FF; /* Cor do texto */
+  background-color: var(--highlight-color);
+  color: var(--text-color);
 }
 
 :root {
-  --bg-color: #252525; /* Cor de fundo */
-  --text-color: #FFF6FF; /* Cor do texto */
-  --highlight-color: #5F4B64; /* Cor de destaque */
+  --bg-color: #252525;
+  --text-color: #FFF6FF;
+  --highlight-color: #5F4B64;
 
-  --sh-class: #5F4B64; /* Cor de destaque */
-  --sh-identifier: #FFF6FF; /* Cor de texto */
+  --sh-class: #5F4B64;
+  --sh-identifier: #FFF6FF;
   --sh-sign: #8996a3;
   --sh-string: #007f7a;
   --sh-keyword: #e02518;
@@ -23,38 +23,39 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --sh-class: #5F4B64; /* Cor de destaque */
-    --sh-identifier: #FFF6FF; /* Cor de texto */
+    --sh-class: #5F4B64;
+    --sh-identifier: #FFF6FF;
     --sh-keyword: #f47067;
     --sh-string: #0fa295;
   }
+
   html {
     color-scheme: dark;
-    background-color: var(--bg-color); /* Cor de fundo */
-    color: var(--text-color); /* Cor de texto */
+    background-color: var(--bg-color);
+    color: var(--text-color);
   }
 }
 
 html {
   min-width: 360px;
-  background-color: var(--bg-color); /* Cor de fundo */
-  color: var(--text-color); /* Cor de texto */
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .prose a {
   @apply underline transition-all;
-  color: var(--highlight-color); /* Cor de destaque */
+  color: var(--highlight-color);
 }
 
 .prose p {
   @apply my-4;
-  color: var(--text-color); /* Cor de texto */
+  color: var(--text-color);
 }
 
 .prose pre {
   @apply bg-neutral-50 dark:bg-neutral-900;
-  background-color: var(--bg-color); /* Cor de fundo */
-  color: var(--text-color); /* Cor de texto */
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .highlight {

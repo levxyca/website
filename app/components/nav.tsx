@@ -7,6 +7,9 @@ const navItems = {
   '/blog': {
     name: 'blog',
   },
+  '/projects': {
+    name: 'projects',
+  },
   'https://links.levxyca.com/': {
     name: 'check my links!',
   },
