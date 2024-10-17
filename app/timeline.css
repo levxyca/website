@@ -1,0 +1,84 @@
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  padding: 0 30px 30px 30px;
+  position: relative;
+  min-height: 100px;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--highlight-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 50px;
+  top: 0;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: var(--highlight-color);
+  top: 0;
+  left: 55px;
+  bottom: -40px;
+  z-index: -1;
+}
+
+.timeline-content {
+  padding: 0 20px 20px 20px;
+  border-radius: 8px;
+  color: var(--text-color);
+  max-width: 600px;
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px; 
+  text-align: right;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.timeline-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.timeline-title a {
+  text-decoration: none;
+  color: var(--highlight-color);
+}
+
+.timeline-title a:hover {
+  text-decoration: underline;
+}
+
+.timeline-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.timeline-item:last-child:before {
+  display: none;
+}

@@ -1,4 +1,5 @@
 import { BlogPosts } from 'app/components/posts'
+import ConvertKitForm from './components/convertkitform'
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
       <div className="my-8">
         <BlogPosts />
       </div>
+      <ConvertKitForm />
     </section>
   )
 }
