@@ -1,10 +1,13 @@
+// Importação dos dados
 import { newslevxycaData } from './newslevxyca';
 import { talksData } from './talks';
 import { ambassadorAwardsAndRecognitionData } from './ambassador-awards-recognizations';
 import { spacesData } from './spaces';
 import { videosData } from './videos';
 import { blogpostsData } from './blogposts';
+import { hostEventsData } from './host-events';
 
+// Combinação dos dados da linha do tempo
 const timelineData = [
   // ...newslevxycaData,
   ...talksData,
@@ -12,6 +15,11 @@ const timelineData = [
   ...spacesData,
   ...videosData,
   ...blogpostsData,
+  ...hostEventsData,
 ];
 
+// Se precisar, ordenar por data
+timelineData.sort((a, b) => (a.date < b.date ? -1 : 1));
+
+// Exportando os dados
 export default timelineData;
