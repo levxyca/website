@@ -40,6 +40,7 @@ const Timeline: React.FC<TimelineProps> = () => {
                   item.title
                 )}
               </h3>
+              <section className='timeline-type'><span className="highlight">{item.type}</span></section>
               <p>{item.description}</p>
               {item.image && (
                 <div className="timeline-image">

@@ -50,4 +50,33 @@ export const talksData: TimelineItem[] = [
         description: 'Palestra realizada no stand do GitHub Education na #CPBR14 contando sobre o que é o programa GitHub Star e minha trajetória.',
         image: 'images/cpbr14.avif',
     },
+    {
+        date: '2022-09-23',
+        type: 'talk',
+        title: 'Como live coding pode te ajudar sendo uma pessoa iniciante na área de TI',
+        description: 'Já ouviu a palavra do live coding hoje? Nessa palestra você vai conhecer esse universo e descobrir como ele pode te ajudar a se desenvolver sendo uma pessoa de tecnologia. Veja como aprender com outras pessoas, fazer networking, melhorar suas soft skills e ir além com o consumo de live coding. Palestra feita no evento da Codecon de 2022.',
+        image: 'images/codecon-2022.png',
+    },
+    {
+        date: '2022-09-15',
+        type: 'talk',
+        title: 'Painel: GitHub Stars na OctogatosConf 2022',
+        description: 'Participação no painel sobre Github Stars na OctogatosConf 2022, uma conferência Latinx global de tecnologia.',
+        link: 'https://www.twitch.tv/videos/1591556866',
+    },
+    {
+        date: '2022-09-02',
+        type: 'talk',
+        title: 'GitHub Actions: Deixando o seu perfil do GitHub mais legal com o GitHub Actions!',
+        description: 'Participação no Encontra MLSAs no Microsoft Reactor falando sobre GitHub Actions.',
+        link: 'https://www.youtube.com/watch?v=pzfuv-njlKg&ab_channel=MicrosoftReactor',
+    },
+    {
+        date: '2022-07-20',
+        type: 'talk',
+        title: 'Palestra: A importância da acessibilidade e como introduzir isso para dentro dos nossos projetos com HTML',
+        description: 'Participação no MEETUP do C6 Bank: batendo um papo sobre acessibilidade!',
+        image: 'images/c6-acessibilidade.png',
+        link: 'https://github.com/levxyca/acessibilidade',
+    },
 ];
