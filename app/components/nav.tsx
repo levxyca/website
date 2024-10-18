@@ -10,9 +10,9 @@ const navItems = {
   '/projects': {
     name: 'projects',
   },
-  // '/timeline': {
-  //   name: 'timeline',
-  // },
+  '/timeline': {
+    name: 'timeline',
+  },
   'https://links.levxyca.com/': {
     name: 'check my links!',
   },

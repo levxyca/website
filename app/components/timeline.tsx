@@ -28,9 +28,9 @@ const Timeline: React.FC<TimelineProps> = () => {
             className={`timeline-item ${isLastItem ? 'last-item' : ''}`}
             key={index}
           >
-            <div className="timeline-dot"></div>
-            <div className="timeline-content">
-              <span className="timeline-date">{formattedDate}</span>
+            <span className="timeline-date">{formattedDate}</span> {/* Data à esquerda */}
+            <div className="timeline-dot"></div> {/* Ponto */}
+            <div className="timeline-content"> {/* Conteúdo da timeline */}
               <h3 className="timeline-title">
                 {item.link ? (
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
