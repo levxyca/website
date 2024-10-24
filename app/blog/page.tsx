@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">blog archives</h1>
-      <BlogPosts />
+      <BlogPosts showAllPosts={true} />
     </section>
   )
 }
