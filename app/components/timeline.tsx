@@ -31,9 +31,17 @@ const Timeline: React.FC = () => {
                   item.title
                 )}
               </h3>
-              <section className='timeline-type'>
-                <span className="highlight">{item.type}</span>
+              <section className="timeline-type">
+                {(typeof item.type === 'string' ? [item.type] : item.type).map((type) => (
+                  <React.Fragment key={type}> {/* Usando o valor do tipo como chave */}
+                    <span className="highlight">{type}</span>
+                    {item.type.length > 1 && (
+                      <span style={{ display: 'inline-block', width: '0.5em' }}></span>
+                    )}
+                  </React.Fragment>
+                ))}
               </section>
+
               <p>{item.description}</p>
               {item.image && (
                 <div className="timeline-image">

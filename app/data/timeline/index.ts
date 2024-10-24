@@ -5,7 +5,7 @@ import { ambassadorAwardsAndRecognitionData } from './ambassador-awards-recogniz
 import { spacesData } from './spaces';
 import { videosData } from './videos';
 import { blogpostsData } from './blogposts';
-import { hostEventsData } from './host-events';
+import { eventsData } from './events';
 
 // Combinação dos dados da linha do tempo
 const timelineData = [
@@ -15,7 +15,7 @@ const timelineData = [
   ...spacesData,
   ...videosData,
   ...blogpostsData,
-  ...hostEventsData,
+  ...eventsData,
 ];
 
 // Se precisar, ordenar por data

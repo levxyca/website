@@ -28,7 +28,7 @@ export interface TimelineItem {
   /**
    * Type of the event (e.g., talk, open-source).
    */
-  type: TimelineType;
+  type: TimelineType | TimelineType[];
 
   /**
    * Description of the event. Can be optional if some events don't require detailed descriptions.
