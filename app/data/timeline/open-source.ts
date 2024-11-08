@@ -44,4 +44,18 @@ export const openSourceData: TimelineItem[] = [
         description: 'Um dicionário tech para pessoas que querem aprender mais sobre termos técnicos dentro da tecnologia.',
         link: 'https://github.com/levxyca/diciotech',
     },
+    {
+        date: new Date('2023-11-23'),
+        type: TimelineType.OpenSource,
+        title: 'Lançamento da versão 1.0 do Diciotech 📖',
+        description: 'Um dicionário tech para pessoas que querem aprender mais sobre termos técnicos dentro da tecnologia.',
+        link: 'https://github.com/levxyca/diciotech/releases/tag/v1.0',
+    },
+    {
+        date: new Date('2024-09-20'),
+        type: TimelineType.OpenSource,
+        title: 'Lançamento da versão v1.1.0 do Diciotech 🚀',
+        description: 'Tenho o prazer de anunciar a nova versão do Diciotech, que vem recheada de atualizações e melhorias significativas! Desde o lançamento da versão 1.0, implementamos uma série de mudanças para otimizar a experiência das pessoas usuárias e ampliar a precisão do conteúdo técnico disponível.',
+        link: 'https://github.com/levxyca/diciotech/releases/tag/v1.1.0',
+    },
 ];

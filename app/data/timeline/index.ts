@@ -6,6 +6,8 @@ import { spacesData } from './spaces';
 import { videosData } from './videos';
 import { blogpostsData } from './blogposts';
 import { eventsData } from './events';
+import { openSourceData } from './open-source';
+import { podcastsData } from './podcasts';
 
 // Combinação dos dados da linha do tempo
 const timelineData = [
@@ -16,6 +18,8 @@ const timelineData = [
   ...videosData,
   ...blogpostsData,
   ...eventsData,
+  ...openSourceData,
+  ...podcastsData,
 ];
 
 // Se precisar, ordenar por data

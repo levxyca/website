@@ -77,7 +77,7 @@ export const talksData: TimelineItem[] = [
         type: TimelineType.Talk,
         title: 'Palestra: A importância da acessibilidade e como introduzir isso para dentro dos nossos projetos com HTML',
         description: 'Participação no MEETUP do C6 Bank: batendo um papo sobre acessibilidade!',
-        image: 'images/c6-acessibilidade.png',
+        image: 'images/c6-acessibilidade.jpg',
         link: 'https://github.com/levxyca/acessibilidade',
     },
     {
