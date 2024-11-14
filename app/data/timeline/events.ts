@@ -38,4 +38,27 @@ export const eventsData: TimelineItem[] = [
     description: 'Participação na live do #ChamaAsMina com duas rodas de conversas, uma sobre carreiras e outra sobre produção de conteúdo.\nEstive presente na organização do evento e como mediadora de uma das rodas de conversa.',
     link: 'https://www.youtube.com/watch?v=M5G4Jf9Ox4M&ab_channel=LINUXtips',
   },
+  {
+    date: new Date('2020-07-25'),
+    type: [TimelineType.OrganizedEvents],
+    title: 'Primeira Maratona das Live Coder Girls Brasil',
+    description: '12h de conteúdo ininterrupto criado por mulheres para a comunidade.',
+    link: 'https://feministech.github.io/maratona1/',
+  },
+  {
+    date: new Date('2022-08-27'),
+    type: TimelineType.OrganizedEvents,
+    title: 'Feministalk: Como escrever um livro?',
+    description: 'Apresentado por Karen Novaes e Patrícia, contando com:\nPachi Parra em "Como escrever um livro?"\nLoiane Groner em "Dicas para escrever um livro"\nVivian Matsui em uma entrevista contando sobre como é trabalhar em editora, e ser editora-chefe;',
+    link: 'https://feministech.github.io/maratona1/',
+    image: 'images/feministalk-livro.jpg'
+  },
+  {
+    date: new Date('2023-05-26'),
+    type: TimelineType.Events,
+    title: 'Galactech | Painel: Criando conteúdo pelo universo',
+    description: 'Uma conferência da Feministech sobre Developer Relations, Produção de Conteúdo e Comunidades.',
+    link: 'https://www.youtube.com/watch?v=gf2EKh1hBQk&t=3682s&ab_channel=feministech',
+    image: 'images/galactech.jpg',
+  },
 ];
