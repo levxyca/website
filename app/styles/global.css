@@ -64,3 +64,32 @@ html {
   padding: 0.2em 0.4em;
   border-radius: 0.2em;
 }
+
+/* Ajustando fontes dentro da classe .prose */
+.prose h1 {
+  font-size: 2rem; /* Tamanho maior para título de nível 1 */
+  font-weight: bold;
+}
+
+.prose h2 {
+  font-size: 1.5rem; /* Tamanho para título de nível 2 */
+  font-weight: bold;
+}
+
+.prose h3 {
+  font-size: 1.25rem; /* Tamanho para título de nível 3 */
+  font-weight: bold;
+}
+
+.prose h3 {
+  font-weight: bold;
+}
+
+.prose p {
+  font-size: 1rem; /* Tamanho para parágrafos */
+  line-height: 1.5;
+}
+
+.prose ul, .prose ol {
+  margin-left: 1.5rem; /* Ajustando margem de listas */
+}
