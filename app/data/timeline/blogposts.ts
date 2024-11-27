@@ -86,4 +86,11 @@ export const blogpostsData: TimelineItem[] = [
         description: 'O artigo oferece um guia abrangente sobre como manipular listas, conjuntos e mapas no Flutter, uma plataforma de desenvolvimento de aplicativos móveis. Você aprenderá a criar, modificar e ordenar listas, entenderá as diferenças entre listas e conjuntos, e explorará a flexibilidade dos mapas para associar chaves a valores. Além disso, o artigo apresenta exemplos práticos e métodos essenciais para trabalhar com essas estruturas de dados, permitindo a você aplicar esse conhecimento em seus próprios projetos Flutter. Não perca a oportunidade de aprimorar suas habilidades de programação no Flutter com este guia detalhado e repleto de exemplos funcionais.',
         link: 'hhttps://www.levxyca.com/blog/manipulando-listas-e-mapas-flutter',
     },
+    {
+        date: new Date('2024-11-27'),
+        type: TimelineType.Article,
+        title: 'Desvendando o código aberto: junte-se à revolução colaborativa',
+        description: 'Você já se perguntou como fazer parte da comunidade que impulsiona inovações revolucionárias em software?',
+        link: 'hhttps://www.levxyca.com/blog/desvendando-o-codigo-aberto',
+    },
 ];
