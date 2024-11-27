@@ -130,4 +130,12 @@ export const talksData: TimelineItem[] = [
         description: 'Keynote: Abertura da Maratona e dicas sobre lives.\nTambém ajudei com a organização e moderação do evento.',
         link: 'https://www.sympla.com.br/evento-online/3-edicao-da-maratona-live-coder-girls/1205187',
     },
+    {
+        date: new Date('2024-11-25'),
+        type: TimelineType.Talk,
+        title: 'Impacto Invisível: Como Mensurar e Mostrar o Valor da Sua Comunidade Tech no 2º Encontro DevlRel SP',
+        description: 'Mensurar o impacto de uma comunidade tech pode ser um dos maiores desafios para quem trabalha com Developer Relations. Nesta palestra, vamos explorar como medir engajamento e contribuição da comunidade, conectar esses dados aos objetivos da empresa e, principalmente, como mostrar o valor real que sua comunidade gera. Se você quer aprender a transformar números em insights estratégicos e provar o impacto do seu trabalho, essa palestra é para você!',
+        link: 'https://www.youtube.com/watch?v=YNzy9HTBG8k',
+        image: 'images/encontro-dev-rel-sp.jpeg'
+    },
 ];
