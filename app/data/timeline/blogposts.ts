@@ -93,4 +93,11 @@ export const blogpostsData: TimelineItem[] = [
         description: 'Você já se perguntou como fazer parte da comunidade que impulsiona inovações revolucionárias em software?',
         link: 'hhttps://www.levxyca.com/blog/desvendando-o-codigo-aberto',
     },
+    {
+        date: new Date('2024-11-28'),
+        type: TimelineType.Article,
+        title: 'Impacto Invisível: Como Mensurar e Mostrar o Valor da Sua Comunidade Tech',
+        description: 'Você já teve dificuldades de demonstrar qual o verdadeiro impacto da sua comunidade tech?\nMensurar o impacto de uma comunidade de tecnologia pode ser um dos maiores desafios para quem trabalha com Developer Relations ou Community Management. Apesar de muitas comunidades serem espaços de troca, aprendizado e conexão, o impacto que elas geram nem sempre é fácil de traduzir em dados claros e estratégicos para as empresas.\nSe você já se perguntou como transformar números em insights que mostram o valor da sua comunidade, este artigo é para você. Vou compartilhar reflexões e um caminho prático para mensurar e comunicar o impacto de forma estratégica.',
+        link: 'hhttps://www.levxyca.com/blog/impacto-invisivel',
+    },
 ];
