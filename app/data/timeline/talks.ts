@@ -138,4 +138,12 @@ export const talksData: TimelineItem[] = [
         link: 'https://www.youtube.com/watch?v=YNzy9HTBG8k',
         image: 'images/encontro-dev-rel-sp.jpeg'
     },
+    {
+        date: new Date('2024-11-29'),
+        type: TimelineType.Talk,
+        title: 'Diciotech: o dicionário tech colaborativo que você pode ajudar a construir no Git Together SP',
+        description: 'Você já se deparou com termos técnicos na área de tecnologia que pareciam super confusos para você? Não se preocupe, você não está só! 🫂 A tecnologia é uma área vasta e em constante evolução, e muitas vezes pode ser desafiador acompanhar os termos que surgem a cada dia. É por isso que o projeto Diciotech 📖 é uma ferramenta valiosa para pessoas que desejam aprender mais sobre o universo tech.',
+        link: 'https://www.levxyca.com/blog/diciotech',
+        image: 'images/diciotech-meli-2024.jpeg'
+    },
 ];
