@@ -6,6 +6,9 @@ export enum TimelineType {
   Newsletter = 'newsletter',
   AmbassadorAndAwards = 'ambassador and awards',
   Space = 'space',
+  Freebie = 'freebie',
+  Template = 'template',
+  Other = 'other',
   // Developer options
   OpenSource = 'open source',
   // Events options

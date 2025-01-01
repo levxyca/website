@@ -79,4 +79,11 @@ export const podcastsData: TimelineItem[] = [
         description: 'Neste episódio conversamos sobre as nossas funcionalidades preferidas no GitHub, uma dos principais plataformas de hospedagem de código-fonte.',
         link: 'https://www.hipsters.tech/github-e-nossas-funcionalidades-preferidas-hipsters-ponto-tech-304/',
     },
+    {
+        date: new Date('2021-02-17'),
+        type: TimelineType.Podcast,
+        title: 'Episódio 04 - Criação de Conteúdo',
+        description: 'Nesse episodio conversamos sobre como criamos conteúdo.',
+        link: 'https://creators.spotify.com/pod/show/mocasdaweb/episodes/Episdio-04---Criao-de-Contedo-eqi2p1',
+    },
 ];

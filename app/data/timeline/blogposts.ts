@@ -6,7 +6,7 @@ export const blogpostsData: TimelineItem[] = [
         date: new Date('2024-05-21'),
         type: TimelineType.Article,
         title: 'Tecnologia, comunicação e pessoas: descubra o papel de uma pessoa Tech Community Manager.',
-        description: 'Descubra o papel de uma Tech Community Manager através da minha experiência pessoal. Saiba como essa função envolve nutrir comunidades, organizar eventos, criar conteúdos e servir como elo entre a comunidade e a empresa.',
+        description: 'Descubra o papel de uma Tech Comamunity Manager através da minha experiência pessoal. Saiba como essa função envolve nutrir comunidades, organizar eventos, criar conteúdos e servir como elo entre a comunidade e a empresa.',
         link: 'https://www.levxyca.com/blog/tech-community-manager',
     },
     {
