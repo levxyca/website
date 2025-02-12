@@ -107,4 +107,11 @@ export const blogpostsData: TimelineItem[] = [
         description: 'Vamos falar sobre programação funcional? Eu comecei minha jornada na programação com POO (Programação Orientada a Objetos), e recentemente tenho explorado o mundo da programação funcional. Mudar a chavinha e enxergar problemas com uma abordagem completamente diferente tem sido uma experiência 🤯.',
         link: 'https://www.levxyca.com/blog/programacao-funcional',
     },
+    {
+        date: new Date('2025-02-12'),
+        type: TimelineType.Article,
+        title: 'Tech Community Manager não é só um Community Manager voltado para tecnologia. Descubra por quê!',
+        description: 'Esses dias me perguntaram: Por que contratar uma Tech Community Manager? Não seria o mesmo que uma Community Manager?.\nEntão, vamos falar sobre essa diferença e por que eu sou Tech Community Manager! 🔥',
+        link: 'https://www.levxyca.com/blog/tcm-versus-cm',
+    },
 ];
