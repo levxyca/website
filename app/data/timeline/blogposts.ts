@@ -114,4 +114,11 @@ export const blogpostsData: TimelineItem[] = [
         description: 'Esses dias me perguntaram: Por que contratar uma Tech Community Manager? Não seria o mesmo que uma Community Manager?.\nEntão, vamos falar sobre essa diferença e por que eu sou Tech Community Manager! 🔥',
         link: 'https://www.levxyca.com/blog/tcm-versus-cm',
     },
+    {
+        date: new Date('2025-02-18'),
+        type: TimelineType.Article,
+        title: 'Construindo aplicativos mais robustos e escaláveis com Flutter: desvendando a implementação da arquitetura MVVM',
+        description: 'Ei, você, pessoa apaixonada por desenvolvimento de aplicativos móveis! Se você está aqui, é provável que já tenha se aventurado no mundo do Flutter, a incrível estrutura de desenvolvimento de aplicativos da Google. Mas você sabia que, além de criar interfaces de usuário deslumbrantes e fluidas, também é possível elevar o seu jogo de programação com uma arquitetura sólida?',
+        link: 'https://www.levxyca.com/blog/flutter-mvvm',
+    },
 ];

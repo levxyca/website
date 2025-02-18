@@ -1,0 +1,192 @@
+---
+title: 'Construindo aplicativos mais robustos e escaláveis com Flutter: desvendando a implementação da arquitetura MVVM'
+publishedAt: '2025-02-18'
+summary: 'Ei, você, pessoa apaixonada por desenvolvimento de aplicativos móveis! Se você está aqui, é provável que já tenha se aventurado no mundo do Flutter, a incrível estrutura de desenvolvimento de aplicativos da Google. Mas você sabia que, além de criar interfaces de usuário deslumbrantes e fluidas, também é possível elevar o seu jogo de programação com uma arquitetura sólida?'
+---
+
+Ei, você, pessoa apaixonada por desenvolvimento de aplicativos móveis! Se você está aqui, é provável que já tenha se aventurado no mundo do Flutter, a incrível estrutura de desenvolvimento de aplicativos da Google. Mas você sabia que, além de criar interfaces de usuário deslumbrantes e fluidas, também é possível elevar o seu jogo de programação com uma arquitetura sólida?
+
+## O que é MVVM?
+
+Boas-vindas ao nosso passeio pelos corredores da MVVM com Flutter!  A MVVM(Model-View-ViewModel) é uma arquitetura que pode ajudar seus aplicativos a serem mais organizados, fáceis de manter e escaláveis.
+
+Falando de uma forma mais técnica, o pattern MVVM é um padrão de projeto criado por John Goshmann, onde a ideia, basicamente, é estabelecer uma clara separação de responsabilidades no seu projeto e facilitar a manutenção do aplicativo.
+
+Você já pensou em como um aplicativo de celular funciona por dentro? Eu gosto de pensar que é algo parecido com um grande quebra-cabeça, onde temos várias pecinhas. A MVVM é uma maneira legal de organizar esse quebra-cabeça para que tudo funcione.
+
+1. **Model (Modelo):** Imagine isso como a parte do quebra-cabeça que guarda todas as informações importantes. São como as peças que representam os dados do seu aplicativo.
+2. **View (Visualização):** Essa é a parte onde você define a aparência do que a pessoa usuária vê na telinha. É a interface, os botões, as telas bonitas que ajudam o aplicativo ser um ambiente legal de se usar. É como a imagem completa do quebra-cabeça.
+3. **ViewModel (Modelo de Visualização):** O ViewModel é como um elo entre o **Model** e a **View**. Ele não tem toda a informação, mas sabe como pegar as peças do **Model** e mostrá-las de forma bonita na **View**.
+
+Ou seja, o tchan da MVVM, é que ela mantém as coisas organizadas. O **Model** não precisa saber sobre como a **View** funciona, e a **View** não precisa se preocupar em sabe tudo sobre onde os dados estão guardados. E o ViewModel? Ele cuida da comunicação entre eles, para que todos trabalhem juntinhos.
+
+Para simplificar ainda mais, pense nisso como uma pessoa que chefia a cozinha (ViewModel) que pega os ingredientes (dados no Model) e os transforma em um prato incrível (a interface na View). E você, a pessoa usuária, só precisa aproveitar a comida deliciosa sem se preocupar com como tudo foi feito nos bastidores.
+
+Então, a MVVM é como uma equipe bem entrosada que trabalha para criar aplicativos legais e funcionais. Com essa abordagem, fica mais fácil entender e construir aplicativos incríveis!
+
+## Tá, mas por que eu deveria usar esse tal de MVVM?
+
+Agora que entendemos como funciona a arquitetura, podemos notar que o MVVM tem vários pontos de vantagens legais que podem ajudar muito os seus projetos usando a tecnologia Flutter.
+
+A primeira coisa que podemos notar, como até foi falado ali em cima, é sobre como o MVVM mantém as coisas organizadas, por esse motivo, essa arquitetura nos permite separar muito bem as responsabilidades, tornando o código mais organizado e com uma boa legibilidade para outras pessoas desenvolvedoras que forem dar manutenção(ou até mesmo você na semana seguinte, sem se lembrar do que foi feito na semana passada, não que isso seja baseado em mim).
+
+Por conta da sua estrutura, conseguimos ter também uma vantagem que é a reutilização de código, ter essas camadas bem separadas(Model, View e ViewModel), também facilita na criação de teste unitários, com a ViewModel, podemos testá-la de forma isolada, garantindo a qualidade do código.
+
+O MVVM também é uma arquitetura que pode ajudar a lidar de forma eficaz o gerenciamento de estado dos seus aplicativos Flutter, além de ser uma arquitetura escalável, podendo ser adaptada para diferentes tamanhos de projetos, permitindo você comece com algo simples e vá crescendo conforme a demanda do projeto.
+
+## MVVM, na prática, vamos implementar!
+
+Tudo bem, já entendemos o que é e por que você deveria usar esse tal de MVVM, agora vamos aprender como implementar isso nos seus projetos. Para isso, vamos pegar um exemplo de uma feature simples, mas que demonstra como esses conceitos funcionam na prática.
+
+Neste exemplo, temos um aplicativo Flutter que exibe uma lista de gatos e permite adicionar novos gatos. O ViewModel (CatViewModel) cuida dos dados dos gatos e avisa a interface do usuário quando há mudanças. A classe de Visualização (CatListPage) mostra a lista de gatos e apresenta um botão para adicionar novos gatos.
+
+Lembre-se de importar as classes de forma adequada e configure o arquivo **`main.dart`** para mostrar a **`CatListPage`** como a tela inicial do seu aplicativo. Este será um exemplo simples de como implementar o padrão MVVM no Flutter para gerenciar informações, usando gatinhos como exemplo.
+
+### Criando um novo projeto Flutter
+
+O primeiro passo, é, claro, temos um projeto Flutter para trabalharmos com o MVVM. Para isso, eu irei criar um projeto do zero para exemplificar. Caso você não saiba muito bem como isso funciona ou queria entender mais sobre o básico de Flutter, recomendo esse [repositório que explica toda essa parte inicial](https://github.com/levxyca/hello_world-flutter) ou mesma a própria [documentação do Flutter](https://docs.flutter.dev/get-started/codelab) que explica como criar o seu primeiro aplicativo.
+
+Para simplificar, como não vou precisar de muitas configurações adicionais, eu abri o terminal na pasta onde queria alocar o meu projeto Flutter e usei o comando `flutter create nome-do-projeto` para criar um novo projeto em Flutter. Chamarei o projeto de MVVM:
+
+```powershell
+flutter create mvvm
+```
+
+Se a etapa for concluída com sucesso, você deve ver a mensagem abaixo no seu terminal. Caso contrário, você pode receber uma mensagem de erro indicando que a operação falhou em algum momento.
+
+![Exemplo do "flutter create mvvm" em execução.](public/images/flutter-mvvm-example-01.png)
+
+Depois de ter criado o projeto, abri o terminal do meu computador e naveguei até a pasta desejada. Uma vez lá, usei o comando `code .` para abrir a pasta diretamente no Visual Studio Code.
+
+![Exemplo do "code ." em execução.](public/images/flutter-mvvm-example-02.png)
+
+### Implementando a camada de Model
+
+Para começar, é importante mencionar que a criação de uma classe para o modelo (Model) é essencial para garantir a organização do seu projeto. Neste caso, o objetivo é representar informações sobre gatos, o que inclui diferentes características e dados relevantes para a sua aplicação.
+
+Ao criar a classe do modelo, é possível definir atributos como cor, idade, peso, entre outros. Além disso, é importante pensar em como essas informações serão armazenadas e acessadas em diferentes partes do seu código. Para isso, é possível utilizar diferentes técnicas, como encapsulamento e herança.
+
+Não se esqueça também de pensar em como essas informações serão inseridas na sua aplicação. Será através de um formulário? De um banco de dados? É importante considerar essas questões para garantir que a sua classe seja integrada de forma eficiente ao restante do seu projeto.
+
+Em resumo, a criação de uma classe para representar informações é uma etapa fundamental do seu projeto. Ao definir cuidadosamente os atributos e pensar em como eles serão inseridos e acessados, você garante uma base sólida e organizada para o seu código, facilitando o desenvolvimento e manutenção da sua aplicação.
+
+```dart
+class Cat {
+  final String name;
+  final String breed;
+  final int age;
+
+  Cat(this.name, this.breed, this.age);
+}
+```
+
+### Implementando a camada de ViewModel
+
+Agora, vamos criar a classe ViewModel (ViewModel) que será responsável por gerenciar os dados e a lógica relacionada aos gatos. Essa classe é fundamental para o desenvolvimento do aplicativo, pois é por meio dela que será possível apresentar as informações do gato na tela, gerenciar as interações do usuário com a interface e garantir que os dados sejam armazenados e recuperados corretamente. 
+
+Além disso, a classe ViewModel permite que a pessoa desenvolvedora separe as preocupações relacionadas à interface do usuário (UI) das preocupações relacionadas à lógica de negócios, tornando o código mais organizado e fácil de manter. Dessa forma, podemos afirmar que a classe ViewModel é uma peça-chave para o sucesso do aplicativo e deve ser desenvolvida com cuidado e atenção aos detalhes.
+
+```dart
+import 'package:flutter/material.dart';
+import 'cat.dart';
+
+class CatViewModel extends ChangeNotifier {
+  final List<Cat> _cats = [
+    Cat('Whiskers', 'Siamese', 3),
+    Cat('Fluffy', 'Persian', 2),
+    Cat('Tom', 'Tabby', 4),
+  ];
+
+  List<Cat> get cats => _cats;
+
+  void addCat(Cat cat) {
+    _cats.add(cat);
+    notifyListeners();
+  }
+}
+```
+
+### Implementando a camada de View
+
+Agora, vamos criar a classe de visualização (View) que exibirá os gatos na interface da pessoa usuária. Essa classe será responsável por conectar a lógica de negócios da aplicação com a interface da pessoa usuária e garantir que, nesse caso, os gatos sejam exibidos corretamente. Para isso, podemos começar definindo as propriedades que a classe de visualização precisa ter.
+
+Ao criar a classe de visualização, devemos ter em mente que ela deve ser flexível e escalável, de forma que possa ser facilmente adaptada para exibir outros tipos de animais de estimação no futuro, caso a aplicação seja expandida.
+
+Além disso, podemos criar métodos que permitam a adição e remoção de gatos da lista, bem como a atualização da exibição dos gatos na tela. Também é importante considerar a possibilidade de permitir que o usuário interaja com os gatos na interface, por exemplo, clicando em um gato para ver mais informações sobre ele ou para adotá-lo. Mas como a ideia é entendermos os conceitos através de exemplos simples, vamos focar no básico.
+
+```dart
+import 'package:flutter/material.dart';
+import 'cat.dart';
+import 'cat_view_model.dart';
+
+class CatListPage extends StatelessWidget {
+  const CatListPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final viewModel = CatViewModel();
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Lista de Gatos'),
+      ),
+      body: ListView.builder(
+        itemCount: viewModel.cats.length,
+        itemBuilder: (context, index) {
+          final cat = viewModel.cats[index];
+          return ListTile(
+            title: Text(cat.name),
+            subtitle: Text('Breed: ${cat.breed}, Age: ${cat.age}'),
+          );
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          final newCat = Cat('Whiskers Jr.', 'Siamese', 1);
+          viewModel.addCat(newCat);
+        },
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+```
+
+Ao realizar as alterações necessárias no código, não se esqueça de modificar a `main` para que a **CatListPage**, que é a sua view, seja exibida como a primeira tela do aplicativo. 
+
+É importante lembrar que a CatListPage é a página responsável por listar os gatos do aplicativo e garantir que a experiência da pessoa usuária seja a melhor possível. 
+
+Além disso, é recomendável verificar se todas as outras páginas e funcionalidades do aplicativo estão funcionando corretamente após realizar a modificação na `main`. Dessa forma, você garante que o seu aplicativo esteja funcionando corretamente e proporcionando a melhor experiência para quem for utilizar a aplicação.
+
+```dart
+import 'package:flutter/material.dart';
+
+import 'cat_view.dart';
+
+void main() {
+  runApp(
+    const MaterialApp(
+      home: CatListPage(),
+    ),
+  );
+}
+
+```
+
+No final, sua estrutura de arquivos está organizada de forma semelhante ou idêntica à apresentada abaixo. 
+
+Em um projeto real, para garantir que a estrutura seja consistente, é importante revisar cuidadosamente cada pasta e subpasta, garantindo que todos os arquivos estejam armazenados no local correto. Lembre-se de que uma estrutura de arquivos organizada é essencial para garantir a eficiência e a produtividade, e deve ser uma prioridade para qualquer pessoa que trabalhe com documentos digitais.
+
+![Exemplo de estrutura de arquivos.](public/images/flutter-mvvm-example-03.png)
+
+Agora, vamos rodar isso para garantir que tudo está funcionando como deveria e certificar-nos de que não há nenhum erro. Depois de executar, podemos ter certeza de que nosso projeto está funcionando corretamente e que podemos prosseguir com confiança para a próxima etapa. E tcharaaaan:
+
+![Examplo do app rodando.](public/images/flutter-mvvm-example-04.png)
+
+## Conclusão
+
+A implementação da arquitetura MVVM pode parecer um pouco complexa no começo, mas é importante ressaltar que essa complexidade inicial é um investimento que trará grandes benefícios para o desenvolvimento de aplicativos em Flutter a longo prazo. Ao utilizar o padrão MVVM, é possível separar as responsabilidades do código de forma mais clara, o que facilita a manutenção e evolução do aplicativo. Além disso, outra vantagem da arquitetura MVVM é a possibilidade de testar cada um dos componentes separadamente, o que aumenta a confiabilidade do código e a qualidade do aplicativo final.
+
+Para implementar a arquitetura MVVM em um aplicativo Flutter, é importante ter um bom entendimento dos conceitos envolvidos, como o uso de ViewModels para gerenciar o estado da aplicação e a separação clara das camadas Model, View e ViewModel. Com a prática e a experiência, essa implementação se torna cada vez mais fácil e natural, permitindo que a pessoa desenvolvedora aproveite ao máximo as vantagens dessa arquitetura.
+
+Por fim, vale destacar que a arquitetura MVVM é amplamente utilizada em desenvolvimento de aplicativos para diversas plataformas e tecnologias, o que significa que o conhecimento adquirido na através desse artigo pode ser aplicado em outros projetos e áreas de atuação.
