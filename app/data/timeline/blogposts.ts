@@ -121,4 +121,11 @@ export const blogpostsData: TimelineItem[] = [
         description: 'Ei, você, pessoa apaixonada por desenvolvimento de aplicativos móveis! Se você está aqui, é provável que já tenha se aventurado no mundo do Flutter, a incrível estrutura de desenvolvimento de aplicativos da Google. Mas você sabia que, além de criar interfaces de usuário deslumbrantes e fluidas, também é possível elevar o seu jogo de programação com uma arquitetura sólida?',
         link: 'https://www.levxyca.com/blog/flutter-mvvm',
     },
+    {
+        date: new Date('2025-04-23'),
+        type: TimelineType.Article,
+        title: 'O que é essa tal de construção de relacionamentos que tanto falam em Developer Relations?',
+        description: 'Se você pesquisar sobre DevRel, vai encontrar definições sobre "construir relacionamentos com pessoas desenvolvedoras". Mas como isso se traduz na prática? Deixe-me compartilhar minha vivência.',
+        link: 'https://www.levxyca.com/blog/dev-rel',
+    },
 ];

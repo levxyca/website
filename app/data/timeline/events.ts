@@ -166,4 +166,11 @@ export const eventsData: TimelineItem[] = [
     description: 'Mestre de Cerimônia da Sala de Conteúdo Sonia Guimarães, trilha sobre Front-end, na PrograMaria Summit 2021.',
     image: 'images/programaria-summit-2021.jpeg',
   },
+  {
+    date: new Date('2025-03-27'),
+    type: [TimelineType.Events],
+    title: 'Nasce uma estrela: minha jornada até a conquista do GitHub Star na Liga Acadêmica de Computação, Inovação e Código Aberto (LACICA)',
+    description: 'Nesta apresentação, Leticia compartilha sua trajetória desde os primeiros passos como criadora de conteúdo até conquistar o reconhecimento como GitHub Star.',
+    image: 'images/lacica.jpg',
+  },
 ];
