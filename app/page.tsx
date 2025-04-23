@@ -2,14 +2,14 @@ import { BlogPosts } from 'app/components/posts';
 import ConvertKitForm from './components/convertkitform';
 
 const Description = () => (
-  <p className="mb-4">
-    <span className="highlight">Developer Relations</span>, desenvolvedora de software,
-    criadora de conteúdo, e cofundadora da @feminis_tech ✨.
-    Apaixonada por comunicação, busca aprender, compartilhar e ensinar tecnologia através de
-    lives, palestras, eventos, vídeos, artigos, podcasts e mídias sociais.
-    <span className="highlight"> Criando conexões genuínas, capacitando pessoas e promovendo
-      comunidades tecnológicas diversas e inclusivas.</span>
-  </p>
+  <>
+    <p className="mb-4">
+      <span className="highlight">Conecto pessoas a tecnologias por meio de educação e comunidades guiadas por autenticidade e estratégia</span>, traduzindo complexidade técnica em experiências acessíveis e relações com propósito. Tenho experiência em desenvolvimento de software, conteúdo técnico, estratégias de engajamento e construção de comunidades tech alinhadas a negócios.
+    </p>
+    <p className="mb-4">
+      🎯 Acredito no poder das conexões genuínas e em transformar conhecimento técnico em algo tangível — criando impacto real para pessoas, empresas e ecossistemas.
+    </p>
+  </>
 );
 
 const Page = () => {
