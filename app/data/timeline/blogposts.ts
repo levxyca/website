@@ -128,4 +128,11 @@ export const blogpostsData: TimelineItem[] = [
         description: 'Se você pesquisar sobre DevRel, vai encontrar definições sobre "construir relacionamentos com pessoas desenvolvedoras". Mas como isso se traduz na prática? Deixe-me compartilhar minha vivência.',
         link: 'https://www.levxyca.com/blog/dev-rel',
     },
+    {
+        date: new Date('2025-04-28'),
+        type: TimelineType.Article,
+        title: 'O que eu aprendi em um ano como Tech Community Manager?',
+        description: 'Há pouco mais de um ano, migrei para atuar como Tech Community Manager e, bom, agora já se passou mais tempo do que eu percebi! Quero compartilhar com vocês alguns aprendizados desse caminho, porque, convenhamos, nenhuma jornada é linear.',
+        link: 'https://www.levxyca.com/blog/1-ano-como-tech-community',
+    },
 ];
