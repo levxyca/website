@@ -164,7 +164,7 @@ export const eventsData: TimelineItem[] = [
     type: [TimelineType.Events, TimelineType.HostedEvents],
     title: 'MC na PrograMaria Summit 2021',
     description: 'Mestre de Cerimônia da Sala de Conteúdo Sonia Guimarães, trilha sobre Front-end, na PrograMaria Summit 2021.',
-    image: 'images/programaria-summit-2021.jpeg',
+    image: 'images/programaria-summit-2021.jpg',
   },
   {
     date: new Date('2025-03-27'),

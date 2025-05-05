@@ -135,4 +135,11 @@ export const blogpostsData: TimelineItem[] = [
         description: 'Há pouco mais de um ano, migrei para atuar como Tech Community Manager e, bom, agora já se passou mais tempo do que eu percebi! Quero compartilhar com vocês alguns aprendizados desse caminho, porque, convenhamos, nenhuma jornada é linear.',
         link: 'https://www.levxyca.com/blog/1-ano-como-tech-community',
     },
+    {
+        date: new Date('2025-05-05'),
+        type: TimelineType.Article,
+        title: 'De Dev para Dev: por que parei de fazer "projetos de curso" e o que mudou na minha carreira',
+        description: 'Descubra como projetos que resolvem problemas reais podem impulsionar sua carreira em tech. Ideal para quem quer sair dos "projetos de curso" e se destacar como dev.',
+        link: 'https://www.levxyca.com/blog/de-dev-para-dev-projetos-de-curso',
+    },
 ];
