@@ -142,4 +142,11 @@ export const blogpostsData: TimelineItem[] = [
         description: 'Descubra como projetos que resolvem problemas reais podem impulsionar sua carreira em tech. Ideal para quem quer sair dos "projetos de curso" e se destacar como dev.',
         link: 'https://www.levxyca.com/blog/de-dev-para-dev-projetos-de-curso',
     },
+    {
+        date: new Date('2025-06-02'),
+        type: TimelineType.Article,
+        title: 'O que é Developer Relations (DevRel)?',
+        description: 'Escrevi um artigo com tudo o que eu gostaria que tivessem me explicado quando comecei na área. Falo sobre os pilares, as diferenças entre DevRel e marketing tradicional e como vejo meu papel conectando pessoas desenvolvedoras e empresas.',
+        link: 'https://www.levxyca.com/blog/o-que-e-devrel',
+    },
 ];

@@ -173,4 +173,11 @@ export const eventsData: TimelineItem[] = [
     description: 'Nesta apresentação, Leticia compartilha sua trajetória desde os primeiros passos como criadora de conteúdo até conquistar o reconhecimento como GitHub Star.',
     image: 'images/lacica.jpg',
   },
+  {
+    date: new Date('2025-05-16'),
+    type: [TimelineType.Events],
+    title: 'Open Source Friday com o Diciotech',
+    description: 'Neste evento do GitHub, focado em compartilhar e divulgar projetos Open Source, Leticia apresenta o projeto Diciotech, destacando a importância do código aberto e como a comunidade pode contribuir.',
+    link: 'https://www.linkedin.com/posts/github-brazil_est%C3%A1-chegando-nossa-primeira-edi%C3%A7%C3%A3o-do-activity-7305618125650055169-6rlF?utm_source=share&utm_medium=member_desktop&rcm=ACoAABbxRIIBpJcFMMhW8XMv-zMqfP8Cexi-Nw8',
+  },
 ];
