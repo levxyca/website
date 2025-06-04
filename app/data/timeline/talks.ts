@@ -146,4 +146,12 @@ export const talksData: TimelineItem[] = [
         link: 'https://www.levxyca.com/blog/diciotech',
         image: 'images/diciotech-meli-2024.jpeg'
     },
+    {
+        date: new Date('2025-06-12'),
+        type: TimelineType.Talk,
+        title: 'Incentivando seu time a contribuir com open source (E por que isso faz toda diferença!)',
+        description: 'Muitas empresas usam Open Source, mas poucas incentivam suas equipes a contribuírem de volta. Como líderes técnicos podem mudar isso? Nesta palestra, vamos explorar estratégias para motivar times a se envolverem com Open Source, os benefícios para pessoas desenvolvedoras e empresas, e como superar barreiras como tempo, reconhecimento e prioridade. Contribuir não é só sobre código?é sobre aprendizado, networking e inovação.',
+        link: 'https://thedevconf.com/tdc/2025/florianopolis/trilha-lideranca-tecnica',
+        image: 'images/trilha-lideranca-tecnica-incentivando-seu-time-a-contribuir-com-open-source.png'
+    },
 ];
