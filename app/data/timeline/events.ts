@@ -180,4 +180,11 @@ export const eventsData: TimelineItem[] = [
     description: 'Neste evento do GitHub, focado em compartilhar e divulgar projetos Open Source, Leticia apresenta o projeto Diciotech, destacando a importância do código aberto e como a comunidade pode contribuir.',
     link: 'https://www.linkedin.com/posts/github-brazil_est%C3%A1-chegando-nossa-primeira-edi%C3%A7%C3%A3o-do-activity-7305618125650055169-6rlF?utm_source=share&utm_medium=member_desktop&rcm=ACoAABbxRIIBpJcFMMhW8XMv-zMqfP8Cexi-Nw8',
   },
+  {
+    date: new Date('2025-06-12'),
+    type: [TimelineType.Events],
+    title: 'Incentivando Seu Time a Contribuir com Open Source',
+    description: 'Tive a honra de palestrar na trilha de Liderança Técnica, ao lado da Pachi Parra, falando sobre Open Source e Inner Source. Um tema que carrego comigo porque tem tudo a ver com colaboração e comunidade!',
+    image: 'images/tdc-floripa-2025.jpg',
+  },
 ];
