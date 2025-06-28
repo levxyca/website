@@ -28,11 +28,6 @@ html {
   color: var(--text-color);
 }
 
-.prose a {
-  @apply underline transition-all;
-  color: var(--highlight-color);
-}
-
 /* Foco visível universal para acessibilidade */
 :focus-visible {
   outline: 2.5px solid var(--highlight-color);
@@ -54,12 +49,10 @@ html {
 }
 
 .prose p {
-  @apply my-4;
   color: var(--text-color);
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -103,4 +96,32 @@ html {
 .custom-bullets li::marker {
   color: var(--highlight-color);
   font-size: 1.2em;
+}
+
+/* Feedback visual para botões e links */
+a, button, .btn {
+  transition: color 0.18s, background 0.18s, border 0.18s, box-shadow 0.18s, transform 0.18s;
+  cursor: pointer;
+}
+a:hover, a:focus-visible, .btn:hover, .btn:focus-visible, button:hover, button:focus-visible {
+  color: #fff;
+  background: var(--highlight-color);
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 2px 12px 0 rgba(95,75,100,0.10);
+  transform: translateY(-2px) scale(1.03);
+}
+a:active, .btn:active, button:active {
+  color: #fff;
+  background: #3d2e41;
+  transform: scale(0.98);
+}
+
+/* Animação suave para fade-in de seções */
+section, .container, main {
+  animation: fadein 0.7s cubic-bezier(.4,0,.2,1);
+}
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
 }
