@@ -79,3 +79,8 @@ html {
 .prose ul, .prose ol {
   margin-left: 1.5rem; /* Ajustando margem de listas */
 }
+
+.custom-bullets li::marker {
+  color: var(--highlight-color);
+  font-size: 1.2em;
+}

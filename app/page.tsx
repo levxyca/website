@@ -1,14 +1,23 @@
 import { BlogPosts } from 'app/components/posts';
 import ConvertKitForm from './components/convertkitform';
+import { getTimelineStats } from './components/timelineStats';
+
+const stats = getTimelineStats();
 
 const Description = () => (
   <>
     <p className="mb-4">
-      <span className="highlight">Conecto pessoas a tecnologias por meio de educação e comunidades guiadas por autenticidade e estratégia</span>, traduzindo complexidade técnica em experiências acessíveis e relações com propósito. Tenho experiência em desenvolvimento de software, conteúdo técnico, estratégias de engajamento e construção de comunidades tech alinhadas a negócios.
+      <span className="highlight">
+        Conecto devs à tecnologia através de educação técnica, conteúdo estratégico e comunidades autênticas.
+      </span>
     </p>
-    <p className="mb-4">
-      🎯 Acredito no poder das conexões genuínas e em transformar conhecimento técnico em algo tangível — criando impacto real para pessoas, empresas e ecossistemas.
-    </p>
+    <ul className="mb-4 ml-8 list-disc text-base font-semibold text-[var(--text-color)] custom-bullets">
+      <li>+{stats.talks} palestras e workshops</li>
+      <li>+{stats.articles} artigos publicados</li>
+      <li>+{stats.events} eventos organizados/participados</li>
+      <li>+{stats.openSource} projetos open source</li>
+      <li>+{stats.podcasts} podcasts e entrevistas</li>
+    </ul>
   </>
 );
 
