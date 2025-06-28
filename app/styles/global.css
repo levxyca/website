@@ -33,6 +33,26 @@ html {
   color: var(--highlight-color);
 }
 
+/* Foco visível universal para acessibilidade */
+:focus-visible {
+  outline: 2.5px solid var(--highlight-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--highlight-color);
+  transition: outline 0.2s, box-shadow 0.2s;
+}
+
+/* Links: contraste e foco */
+.prose a {
+  color: var(--highlight-color);
+  text-decoration: underline;
+  outline: none;
+}
+.prose a:focus-visible {
+  outline: 2.5px solid var(--highlight-color);
+  outline-offset: 2px;
+  background: rgba(95,75,100,0.15);
+}
+
 .prose p {
   @apply my-4;
   color: var(--text-color);
@@ -44,14 +64,14 @@ html {
   color: var(--text-color);
 }
 
+/* Highlight: contraste reforçado */
 .highlight {
   background-color: var(--highlight-color);
-  color: var(--text-color);
+  color: #fff;
   padding: 0.2em 0.4em;
   border-radius: 0.2em;
 }
 
-/* Ajustando fontes dentro da classe .prose */
 .prose h1 {
   font-size: 2rem; /* Tamanho maior para título de nível 1 */
   font-weight: bold;
