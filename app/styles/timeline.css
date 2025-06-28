@@ -84,3 +84,87 @@ p {
 .timeline-item:last-child:before {
   display: none;
 }
+
+.timeline-filters {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: inherit;
+  color: var(--text-color);
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.timeline-filters label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--highlight-color);
+  margin-right: 0.25rem;
+}
+
+.timeline-filters select {
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: 1.5px solid var(--highlight-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  min-width: 100px;
+  margin-right: 0.25rem;
+  box-shadow: none;
+}
+
+.timeline-filters input[type="search"] {
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: 1.5px solid var(--highlight-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  min-width: 120px;
+  margin-right: 0.25rem;
+  box-shadow: none;
+  flex: 1 1 120px;
+  max-width: 220px;
+}
+
+.timeline-filters select:focus,
+.timeline-filters input[type="search"]:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 1.5px var(--highlight-color);
+}
+
+@media (max-width: 600px) {
+  .timeline-filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .timeline-filters label {
+    margin-right: 0;
+    margin-bottom: 0.15rem;
+  }
+  .timeline-filters select,
+  .timeline-filters input[type="search"] {
+    margin-right: 0;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+.timeline-empty {
+  color: var(--highlight-color);
+  font-weight: bold;
+  margin: 2rem 0;
+  text-align: center;
+}
