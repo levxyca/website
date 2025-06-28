@@ -28,6 +28,11 @@ const Page = () => {
         Leticia @levxyca
       </h1>
       <Description />
+      <div className="mb-6">
+        <a href="/about" className="inline-block px-4 py-2 rounded border border-[var(--highlight-color)] text-[var(--highlight-color)] font-bold hover:bg-[var(--highlight-color)] hover:text-[var(--text-color)] transition">
+          Conheça minha jornada completa
+        </a>
+      </div>
       <div className="my-8">
         <BlogPosts />
       </div>
