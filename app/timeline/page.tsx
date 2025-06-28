@@ -38,6 +38,20 @@ export const metadata = {
     'Tech Strategy',
     'Tech Authenticity',
   ],
+  openGraph: {
+    title: 'Timeline | Developer Relations, Comunidades Tech e Open Source',
+    description: 'Linha do tempo de experiências, talks, eventos, projetos open source e liderança em comunidades tech. Por Leticia @levxyca.',
+    url: 'https://www.levxyca.com/timeline',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-timeline.png',
+        width: 1200,
+        height: 630,
+        alt: 'Timeline Leticia Leonardo (levxyca)',
+      },
+    ],
+  },
 };
 
 const TimelinePage: React.FC = () => {

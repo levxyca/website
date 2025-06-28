@@ -19,6 +19,20 @@ export const metadata = {
     'Tech Blog',
     'Tech Impact',
   ],
+  openGraph: {
+    title: 'Sobre | Leticia @levxyca',
+    description: 'Minha trajetória em Developer Relations, comunidades tech, live coding, conteúdo e impacto em tecnologia.',
+    url: 'https://www.levxyca.com/about',
+    type: 'profile',
+    images: [
+      {
+        url: '/images/levxyca-profile.jpg',
+        width: 600,
+        height: 600,
+        alt: 'Leticia Leonardo (levxyca) profile',
+      },
+    ],
+  },
 };
 
 export default function AboutPage() {

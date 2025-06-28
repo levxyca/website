@@ -22,6 +22,20 @@ export const metadata = {
     'Tech Strategy',
     'Tech Authenticity',
   ],
+  openGraph: {
+    title: 'Projetos | Developer Relations, Open Source e Comunidades Tech',
+    description: 'Projetos open source, iniciativas de impacto e experiências em Developer Relations e comunidades tech. Por Leticia @levxyca.',
+    url: 'https://www.levxyca.com/projects',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-projects.png',
+        width: 1200,
+        height: 630,
+        alt: 'Projetos Leticia Leonardo (levxyca)',
+      },
+    ],
+  },
 }
 
 const projects = [

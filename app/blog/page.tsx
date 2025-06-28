@@ -45,6 +45,20 @@ export const metadata = {
     'Tech Strategy',
     'Tech Authenticity',
   ],
+  openGraph: {
+    title: 'Blog | Developer Relations, Comunidades Tech e Open Source',
+    description: 'Aprendizados, estratégias e experiências em Developer Relations, liderança de comunidades tech, talks, artigos, open source e engajamento. Conteúdo para quem busca impacto real em tecnologia. Por Leticia @levxyca.',
+    url: 'https://www.levxyca.com/blog',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-blog.png',
+        width: 1200,
+        height: 630,
+        alt: 'Blog Leticia Leonardo (levxyca)',
+      },
+    ],
+  },
 }
 
 export default function Page() {
