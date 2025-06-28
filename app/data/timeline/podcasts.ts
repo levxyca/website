@@ -70,7 +70,7 @@ export const podcastsData: TimelineItem[] = [
         title: 'Esquenta 2022 - Carreira: Frontend com Leticia @levxyca - Episódio #16.2',
         description: 'Boas vindas à segunda temporada do Feministech Podcast, um podcast feito por uma equipe de pessoas maravilhosas e envolvidas com tecnologia!\nNo segundo episódio do nosso esquenta a Leticia @levxyca fala um pouco sobre front-end e a carreira nesta área.',
         link: 'https://anchor.fm/feministech/episodes/Esquenta-2022---Carreira-Frontend-com-Leticia-levxyca---Episdio-16-2-e1enl05',
-        image: 'images/feministech-esquenta-2022.jpg'
+        image: '/images/feministech-esquenta-2022.jpg'
     },
     {
         date: new Date('2022-05-10'),

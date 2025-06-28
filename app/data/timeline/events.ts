@@ -21,14 +21,14 @@ export const eventsData: TimelineItem[] = [
     type: TimelineType.Events,
     title: 'Open Source Time com a Levxyca: Segunda edição mão na massa 🚀',
     description: 'Evento realizado no servidor do Discord da Comunidade Impulso Network. Este é o momento perfeito para tirar dúvidas sobre Open Source, compartilhar suas experiências, e ter suporte ao vivo para começar a contribuir. Já imaginou sair do evento com a sua primeira contribuição em um projeto real?',
-    image: 'images/open-source-time-23-10.jpg',
+    image: '/images/open-source-time-23-10.jpg',
   },
   {
     date: new Date('2022-03-26'),
     type: [TimelineType.Events, TimelineType.HostedEvents],
     title: 'Feministalk AprenDev 📚 - Como aprender a aprender tecnologia?',
     description: 'Evento sobre como podemos aprender melhor sobre como aprender melhor assuntos relacionados à tecnologia!\nTrabalhei no planejamento e organização desse evento, também fui host e uma das pessoas moderadoras, ao final, participei da roda de conversa, mediando os assuntos e também conversando sobre como aprender a aprender.',
-    image: 'images/feministalk-aprendev.jpg',
+    image: '/images/feministalk-aprendev.jpg',
     link: 'https://www.twitch.tv/collections/6rWTuUld4BY8Sw',
   },
   {
@@ -51,7 +51,7 @@ export const eventsData: TimelineItem[] = [
     title: 'Feministalk: Como escrever um livro?',
     description: 'Apresentado por Karen Novaes e Patrícia, contando com:\nPachi Parra em "Como escrever um livro?"\nLoiane Groner em "Dicas para escrever um livro"\nVivian Matsui em uma entrevista contando sobre como é trabalhar em editora, e ser editora-chefe;',
     link: 'https://feministech.github.io/maratona1/',
-    image: 'images/feministalk-livro.jpg'
+    image: '/images/feministalk-livro.jpg'
   },
   {
     date: new Date('2023-05-26'),
@@ -59,7 +59,7 @@ export const eventsData: TimelineItem[] = [
     title: 'Galactech | Painel: Criando conteúdo pelo universo',
     description: 'Uma conferência da Feministech sobre Developer Relations, Produção de Conteúdo e Comunidades.',
     link: 'https://www.youtube.com/watch?v=gf2EKh1hBQk&t=3682s&ab_channel=feministech',
-    image: 'images/galactech.jpg',
+    image: '/images/galactech.jpg',
   },
   {
     date: new Date('2024-05-17'),
@@ -164,14 +164,14 @@ export const eventsData: TimelineItem[] = [
     type: [TimelineType.Events, TimelineType.HostedEvents],
     title: 'MC na PrograMaria Summit 2021',
     description: 'Mestre de Cerimônia da Sala de Conteúdo Sonia Guimarães, trilha sobre Front-end, na PrograMaria Summit 2021.',
-    image: 'images/programaria-summit-2021.jpg',
+    image: '/images/programaria-summit-2021.jpg',
   },
   {
     date: new Date('2025-03-27'),
     type: [TimelineType.Events],
     title: 'Nasce uma estrela: minha jornada até a conquista do GitHub Star na Liga Acadêmica de Computação, Inovação e Código Aberto (LACICA)',
     description: 'Nesta apresentação, Leticia compartilha sua trajetória desde os primeiros passos como criadora de conteúdo até conquistar o reconhecimento como GitHub Star.',
-    image: 'images/lacica.jpg',
+    image: '/images/lacica.jpg',
   },
   {
     date: new Date('2025-05-16'),
@@ -185,6 +185,6 @@ export const eventsData: TimelineItem[] = [
     type: [TimelineType.Events],
     title: 'Incentivando Seu Time a Contribuir com Open Source',
     description: 'Tive a honra de palestrar na trilha de Liderança Técnica, ao lado da Pachi Parra, falando sobre Open Source e Inner Source. Um tema que carrego comigo porque tem tudo a ver com colaboração e comunidade!',
-    image: 'images/tdc-floripa-2025.jpg',
+    image: '/images/tdc-floripa-2025.jpg',
   },
 ];

@@ -6,6 +6,7 @@ import '../styles/timeline.css';
 import { format } from 'date-fns';
 import { pt } from 'date-fns/locale';
 import timelineData from '../data/timeline/index';
+import Image from 'next/image';
 
 const Timeline: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<string | null>(null);
@@ -102,7 +103,17 @@ const Timeline: React.FC = () => {
               {item.description && <p>{item.description}</p>}
               {item.image && (
                 <div className="timeline-image">
-                  <img src={item.image} alt={`Imagem ilustrativa de ${item.title}`} />
+                  <Image
+                    src={item.image}
+                    alt={`Imagem ilustrativa de ${item.title}`}
+                    width={600}
+                    height={340}
+                    style={{ width: '100%', height: 'auto' }}
+                    loading="lazy"
+                    sizes="(max-width: 800px) 100vw, 800px"
+                    quality={80}
+                    priority={false}
+                  />
                 </div>
               )}
             </div>

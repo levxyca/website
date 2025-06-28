@@ -15,7 +15,7 @@ export const videosData: TimelineItem[] = [
         title: 'Unboxing GitHub Stars ⭐',
         description: 'No final de 2021 eu fui nomeada como Star pelo GitHub. O programa GitHub Stars agradece as pessoas desenvolvedoras mais influentes do GitHub e oferece a elas uma plataforma para mostrar seu trabalho, alcançar mais pessoas e moldar o futuro do GitHub.\nEntão, nesse vídeo, mostro para vocês as primeiras coisas que recebi como membra do GitHub Stars ⭐',
         link: 'https://www.youtube.com/watch?v=bhWco_QQPgM&t=1s&ab_channel=levxyca',
-        image: 'images/gh-stars-unboxing-2022.jpg',
+        image: '/images/gh-stars-unboxing-2022.jpg',
     },
     {
         date: new Date('2021-02-06'),

@@ -8,7 +8,7 @@ export const ambassadorAwardsAndRecognitionData: TimelineItem[] = [
     title: 'Selecionada para ser embaixadora Women Techmakers da Google',
     description: 'Women Techmakers Ambassadors são líderes em todo o mundo apaixonadas por capacitar suas comunidades por meio da organização de eventos, palestras públicas, criação de conteúdo e orientação.\nO programa Women Techmakers Ambassador apoia mulheres em tecnologia que buscam criar impacto e retribuir às suas comunidades.',
     link: 'https://developers.google.com/womentechmakers',
-    image: 'images/wtm-ambassador.avif',
+    image: '/images/wtm-ambassador.avif',
   },
   {
     date: new Date('2023-02-01'),
@@ -23,6 +23,6 @@ export const ambassadorAwardsAndRecognitionData: TimelineItem[] = [
     title: 'GitHub Star',
     description: 'Estrela nomeada do GitHub.',
     link: 'https://stars.github.com/profiles/levxyca/',
-    image: 'images/github-stars.png',
+    image: '/images/github-stars.png',
   },
 ];
