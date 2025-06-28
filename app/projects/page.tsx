@@ -1,8 +1,27 @@
 import { highlight } from "sugar-high";
 
 export const metadata = {
-    title: 'Projects',
-    description: 'Check my projects and open source contributions.',
+  title: 'Projetos | Developer Relations, Open Source e Comunidades Tech',
+  description: 'Projetos open source, iniciativas de impacto e experiências em Developer Relations e comunidades tech. Por Leticia @levxyca.',
+  keywords: [
+    'Developer Relations',
+    'DevRel',
+    'Comunidades Tech',
+    'Leticia Leonardo',
+    'levxyca',
+    'Open Source',
+    'Projetos open source',
+    'Tech Community',
+    'Tech Community Manager',
+    'Conteúdo técnico',
+    'Liderança',
+    'Engajamento',
+    'Tech Events',
+    'Tech Impact',
+    'Tech Inspiration',
+    'Tech Strategy',
+    'Tech Authenticity',
+  ],
 }
 
 const projects = [
@@ -21,6 +40,7 @@ export default function Page() {
             <section className="m-5">
                 <h1 className="font-semibold text-2xl mb-8 tracking-tighter">projects</h1>
                 <p className="mb-5">{introText}</p>
+                <br />
                 <ul className="list-none pl-0">
                     {projects.map((project, index) => (
                         <li key={index} className="mb-3">
