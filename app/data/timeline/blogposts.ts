@@ -149,4 +149,11 @@ export const blogpostsData: TimelineItem[] = [
         description: 'Escrevi um artigo com tudo o que eu gostaria que tivessem me explicado quando comecei na área. Falo sobre os pilares, as diferenças entre DevRel e marketing tradicional e como vejo meu papel conectando pessoas desenvolvedoras e empresas.',
         link: 'https://www.levxyca.com/blog/o-que-e-devrel',
     },
+    {
+        date: new Date('2025-07-03'),
+        type: TimelineType.Article,
+        title: 'Preciso ser dev pra ser DevRel?',
+        description: 'Preciso ser dev para atuar em Developer Relations? Entenda o que realmente importa para trabalhar com DevRel.',
+        link: 'https://www.levxyca.com/blog/preciso-ser-dev-para-ser-devrel',
+    },
 ];
