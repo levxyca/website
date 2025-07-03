@@ -1,4 +1,3 @@
-import React from 'react';
 import Timeline from 'app/components/timeline';
 import timelineData from 'app/data/timeline/index';
 

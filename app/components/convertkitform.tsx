@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
-const ConvertKitForm: React.FC = () => {
+const ConvertKitForm = () => {
     useEffect(() => {
         const formContainer = document.getElementById('convertkit-form');
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TimelineItem } from '../data/timeline/timelineItem';
 import '../styles/timeline.css';
 import { format } from 'date-fns';
@@ -8,7 +8,7 @@ import { pt } from 'date-fns/locale';
 import timelineData from '../data/timeline/index';
 import Image from 'next/image';
 
-const Timeline: React.FC = () => {
+const Timeline = () => {
   const [selectedYear, setSelectedYear] = useState<string | null>(null);
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [search, setSearch] = useState('');
@@ -92,13 +92,13 @@ const Timeline: React.FC = () => {
               </h3>
               <section className="timeline-type">
                 {(typeof item.type === 'string' ? [item.type] : item.type).map((type) => (
-                  <React.Fragment key={type}>
-                    <span className="highlight">{type}</span>
-                    {item.type.length > 1 && (
-                      <span style={{ display: 'inline-block', width: '0.5em' }}></span>
-                    )}
-                  </React.Fragment>
+                  <span className="highlight" key={type}>
+                    {type}
+                  </span>
                 ))}
+                {Array.isArray(item.type) && item.type.length > 1 && (
+                  <span style={{ display: 'inline-block', width: '0.5em' }}></span>
+                )}
               </section>
               {item.description && <p>{item.description}</p>}
               {item.image && (

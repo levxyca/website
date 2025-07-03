@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { highlight } from 'sugar-high'
-import React from 'react'
+import { createElement } from 'react'
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -67,14 +67,26 @@ function slugify(str) {
 function createHeading(level) {
   const Heading = ({ children }) => {
     let slug = slugify(children)
-    return React.createElement(
+    // Scroll suave para âncoras internas
+    const handleClick = (e) => {
+      const el = document.getElementById(slug)
+      if (el) {
+        e.preventDefault()
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        window.history.replaceState(null, '', `#${slug}`)
+      }
+    }
+    return createElement(
       `h${level}`,
       { id: slug },
       [
-        React.createElement('a', {
+        createElement('a', {
           href: `#${slug}`,
           key: `link-${slug}`,
           className: 'anchor',
+          onClick: handleClick,
+          tabIndex: 0,
+          'aria-label': `Ir para seção ${children}`,
         }),
       ],
       children
