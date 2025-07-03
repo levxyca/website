@@ -21,7 +21,11 @@ const Timeline = () => {
   // Filtro combinado
   const filteredItems = timelineData.filter(item => {
     const yearMatch = !selectedYear || new Date(item.date).getFullYear().toString() === selectedYear;
-    const typeMatch = !selectedType || (typeof item.type === 'string' ? item.type === selectedType : item.type.includes(selectedType as any));
+    const typeMatch = !selectedType || (
+      Array.isArray(item.type)
+        ? item.type.map(t => String(t).toLowerCase()).includes(selectedType.toLowerCase())
+        : String(item.type).toLowerCase() === selectedType.toLowerCase()
+    );
     const searchMatch = !search || item.title.toLowerCase().includes(search.toLowerCase()) || (item.description && item.description.toLowerCase().includes(search.toLowerCase()));
     return yearMatch && typeMatch && searchMatch;
   });

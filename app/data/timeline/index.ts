@@ -27,7 +27,8 @@ const timelineData = [
 ];
 
 // Se precisar, ordenar por data
-timelineData.sort((a, b) => (a.date < b.date ? -1 : 1));
+// Ordenar do mais recente para o mais antigo
+timelineData.sort((a, b) => b.date.getTime() - a.date.getTime());
 
 // Exportando os dados
 export default timelineData;
