@@ -64,47 +64,17 @@ function slugify(str) {
     .replace(/\-\-+/g, '-') // Replace multiple - with single -
 }
 
-function createHeading(level) {
-  const Heading = ({ children }) => {
-    let slug = slugify(children)
-    // Scroll suave para âncoras internas
-    const handleClick = (e) => {
-      const el = document.getElementById(slug)
-      if (el) {
-        e.preventDefault()
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        window.history.replaceState(null, '', `#${slug}`)
-      }
-    }
-    return createElement(
-      `h${level}`,
-      { id: slug },
-      [
-        createElement('a', {
-          href: `#${slug}`,
-          key: `link-${slug}`,
-          className: 'anchor',
-          onClick: handleClick,
-          tabIndex: 0,
-          'aria-label': `Ir para seção ${children}`,
-        }),
-      ],
-      children
-    )
-  }
-
-  Heading.displayName = `Heading${level}`
-
-  return Heading
+function createHeadingSSR(level) {
+  return ({ children }) => createElement(`h${level}`, {}, children);
 }
 
 let components = {
-  h1: createHeading(1),
-  h2: createHeading(2),
-  h3: createHeading(3),
-  h4: createHeading(4),
-  h5: createHeading(5),
-  h6: createHeading(6),
+  h1: createHeadingSSR(1),
+  h2: createHeadingSSR(2),
+  h3: createHeadingSSR(3),
+  h4: createHeadingSSR(4),
+  h5: createHeadingSSR(5),
+  h6: createHeadingSSR(6),
   Image: RoundedImage,
   a: CustomLink,
   code: Code,
