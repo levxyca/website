@@ -72,7 +72,9 @@ const Timeline = () => {
         <p className="timeline-empty">Nenhum resultado encontrado.</p>
       )}
       {sortedItems.map((item, index) => {
-        const formattedDate = format(new Date(item.date), 'dd MMM, yyyy', { locale: pt });
+        // Normaliza para UTC para evitar erro de hidratação
+        const dateObj = typeof item.date === 'string' ? new Date(item.date + 'T00:00:00Z') : new Date(item.date);
+        const formattedDate = format(dateObj, 'dd MMM, yyyy', { locale: pt });
         const isLastItem = index === sortedItems.length - 1;
         // Destaque para talks/artigos de DevRel/comunidade
         const isDevRel = (typeof item.type === 'string' ? [item.type] : item.type).some(type => ["talk", "article", "open source", "events", "organized an event", "hosted an event"].includes(type));
@@ -116,7 +118,7 @@ const Timeline = () => {
                     loading="lazy"
                     sizes="(max-width: 800px) 100vw, 800px"
                     quality={80}
-                    priority={false}
+                    priority={index === 0}
                   />
                 </div>
               )}
