@@ -30,6 +30,19 @@ export function generateMetadata({ params }) {
   return {
     title,
     description,
+    keywords: [
+      title,
+      'Developer Relations',
+      'Comunidades Tech',
+      'Open Source',
+      'Blog de tecnologia',
+      'Leticia Leonardo',
+      'levxyca',
+      ...(description ? description.split(' ') : [])
+    ],
+    alternates: {
+      canonical: `${baseUrl}/blog/${post.slug}`,
+    },
     openGraph: {
       title,
       description,
@@ -47,6 +60,19 @@ export function generateMetadata({ params }) {
       title,
       description,
       images: [ogImage],
+    },
+    authors: [{ name: 'Leticia Leonardo', url: baseUrl }],
+    publisher: 'Leticia Leonardo',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   }
 }
@@ -77,7 +103,21 @@ export default function Blog({ params }) {
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
               '@type': 'Person',
-              name: 'My Portfolio',
+              name: 'Leticia Leonardo',
+              url: baseUrl,
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Leticia Leonardo',
+              logo: {
+                '@type': 'ImageObject',
+                url: `${baseUrl}/favicon.png`,
+              },
+            },
+            keywords: post.metadata.summary ? post.metadata.summary.split(' ') : [],
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': `${baseUrl}/blog/${post.slug}`,
             },
           }),
         }}
