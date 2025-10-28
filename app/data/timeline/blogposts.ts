@@ -156,4 +156,11 @@ export const blogpostsData: TimelineItem[] = [
         description: 'Preciso ser dev para atuar em Developer Relations? Entenda o que realmente importa para trabalhar com DevRel.',
         link: 'https://www.levxyca.com/blog/preciso-ser-dev-para-ser-devrel',
     },
+    {
+        date: new Date('2025-10-28'),
+        type: TimelineType.Article,
+        title: 'Por que seu projeto Open Source precisa de um Guia de Contribuição (e como criar um hoje mesmo)',
+        description: 'Se você mantém um projeto open source, crie seu guia de contribuição hoje mesmo.',
+        link: 'https://www.levxyca.com/blog/porque-seu-projeto-open-source-precisa-de-guia-de-contribuicao',
+    },
 ];
