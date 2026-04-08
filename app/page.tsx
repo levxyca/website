@@ -1,8 +1,11 @@
 import { BlogPosts } from 'app/components/posts';
 
+/**
+ * Description component - displays the main value proposition
+ */
 const Description = () => (
   <>
-    <p className="mb-4" style={{ fontFamily: "'PT Serif', serif" }}>
+    <p className="mb-4 font-serif">
       <span className="highlight">
         Conecto devs à tecnologia através de educação técnica, conteúdo estratégico e comunidades autênticas.
       </span>
@@ -10,18 +13,21 @@ const Description = () => (
   </>
 );
 
+/**
+ * Home page component - displays the main landing section
+ */
 const Page = () => {
   return (
     <section className="text-left max-w-4xl mx-auto py-16 px-4">
-      <h1 className="mb-8 text-4xl md:text-6xl font-bold tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+      <h1 className="mb-8 text-4xl md:text-6xl font-bold tracking-tight font-display">
         Leticia Leonardo (@levxyca)
       </h1>
-      <h2 className="mb-8 text-2xl font-semibold tracking-tighter" style={{ fontFamily: "'PT Sans', sans-serif" }}>
+      <h2 className="mb-8 text-2xl font-semibold tracking-tighter font-sans">
         Especialista em Developer Relations
       </h2>
       <Description />
       <div className="my-12">
-        <h3 className="mb-4 text-lg font-medium tracking-tight text-[var(--text-color)] opacity-75" style={{ fontFamily: "'PT Sans', sans-serif" }}>
+        <h3 className="mb-4 text-lg font-medium tracking-tight text-[var(--text-color)] opacity-75 font-sans">
           Posts Recentes
         </h3>
         <BlogPosts />

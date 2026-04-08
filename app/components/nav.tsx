@@ -1,6 +1,18 @@
 import Link from 'next/link'
 
-const navItems = {
+/**
+ * Navigation item configuration
+ */
+interface NavItem {
+  name: string;
+}
+
+/**
+ * Navigation items mapping
+ * - Key: URL path or external link
+ * - Value: Navigation item configuration
+ */
+const navItems: Record<string, NavItem> = {
   '/': {
     name: 'home',
   },
@@ -21,6 +33,9 @@ const navItems = {
   },
 }
 
+/**
+ * Navbar component - sticky navigation with links to main sections
+ */
 export function Navbar() {
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">

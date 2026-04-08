@@ -84,11 +84,6 @@ html {
   font-family: 'PT Sans', sans-serif;
 }
 
-.prose h3 {
-  font-weight: bold;
-  font-family: 'PT Sans', sans-serif;
-}
-
 .prose p {
   font-size: 1rem; /* Tamanho para parágrafos */
   line-height: 1.5;
@@ -97,6 +92,19 @@ html {
 
 .prose ul, .prose ol {
   margin-left: 1.5rem; /* Ajustando margem de listas */
+}
+
+/* Typography utility classes */
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-sans {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.font-serif {
+  font-family: 'PT Serif', serif;
 }
 
 .custom-bullets li::marker {
