@@ -1,38 +1,29 @@
 import { BlogPosts } from 'app/components/posts';
-import { getTimelineStats } from './components/timelineStats';
-
-const stats = getTimelineStats();
 
 const Description = () => (
   <>
-    <p className="mb-4">
+    <p className="mb-4" style={{ fontFamily: "'PT Serif', serif" }}>
       <span className="highlight">
         Conecto devs à tecnologia através de educação técnica, conteúdo estratégico e comunidades autênticas.
       </span>
     </p>
-    <ul className="mb-4 ml-8 list-disc text-base font-semibold text-[var(--text-color)] custom-bullets">
-      <li>+{stats.talks} palestras e workshops</li>
-      <li>+{stats.articles} artigos publicados</li>
-      <li>+{stats.events} eventos organizados/participados</li>
-      <li>+{stats.openSource} projetos open source</li>
-      <li>+{stats.podcasts} podcasts e entrevistas</li>
-    </ul>
   </>
 );
 
 const Page = () => {
   return (
-    <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        Leticia @levxyca
+    <section className="text-left max-w-4xl mx-auto py-16 px-4">
+      <h1 className="mb-8 text-4xl md:text-6xl font-bold tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+        Leticia Leonardo (@levxyca)
       </h1>
+      <h2 className="mb-8 text-2xl font-semibold tracking-tighter" style={{ fontFamily: "'PT Sans', sans-serif" }}>
+        Especialista em Developer Relations
+      </h2>
       <Description />
-      <div className="mb-6">
-        <a href="/about" className="inline-block px-4 py-2 rounded border border-[var(--highlight-color)] text-[var(--highlight-color)] font-bold hover:bg-[var(--highlight-color)] hover:text-[var(--text-color)] transition">
-          Conheça minha jornada completa
-        </a>
-      </div>
-      <div className="my-8">
+      <div className="my-12">
+        <h3 className="mb-4 text-lg font-medium tracking-tight text-[var(--text-color)] opacity-75" style={{ fontFamily: "'PT Sans', sans-serif" }}>
+          Posts Recentes
+        </h3>
         <BlogPosts />
       </div>
     </section>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400');
 @import 'tailwindcss';
 
 ::selection {
@@ -68,25 +69,30 @@ html {
 .prose h1 {
   font-size: 2rem; /* Tamanho maior para título de nível 1 */
   font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .prose h2 {
   font-size: 1.5rem; /* Tamanho para título de nível 2 */
   font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .prose h3 {
   font-size: 1.25rem; /* Tamanho para título de nível 3 */
   font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .prose h3 {
   font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .prose p {
   font-size: 1rem; /* Tamanho para parágrafos */
   line-height: 1.5;
+  font-family: 'PT Serif', serif;
 }
 
 .prose ul, .prose ol {
