@@ -1,5 +1,4 @@
 import { BlogPosts } from 'app/components/posts';
-import ConvertKitForm from './components/convertkitform';
 import { getTimelineStats } from './components/timelineStats';
 
 const stats = getTimelineStats();
@@ -36,7 +35,6 @@ const Page = () => {
       <div className="my-8">
         <BlogPosts />
       </div>
-      <ConvertKitForm />
     </section>
   );
 };
