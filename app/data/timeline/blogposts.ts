@@ -3,6 +3,13 @@ import { TimelineType } from './timelineTypes';
 
 export const blogpostsData: TimelineItem[] = [
     {
+        date: new Date('2026-04-08'),
+        type: TimelineType.Article,
+        title: 'DevRel não é marketing: por que o dev não vai te ouvir se não se sentir representado por você?',
+        description: 'Entenda por que Developer Relations é diferente de marketing tradicional e a importância de se sentir representado pela pessoa de DevRel',
+        link: 'https://www.levxyca.com/blog/devrel-nao-e-marketing',
+    },
+    {
         date: new Date('2024-05-21'),
         type: TimelineType.Article,
         title: 'Tecnologia, comunicação e pessoas: descubra o papel de uma pessoa Tech Community Manager.',
