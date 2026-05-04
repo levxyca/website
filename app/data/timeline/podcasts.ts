@@ -86,4 +86,11 @@ export const podcastsData: TimelineItem[] = [
         description: 'Nesse episodio conversamos sobre como criamos conteúdo.',
         link: 'https://creators.spotify.com/pod/show/mocasdaweb/episodes/Episdio-04---Criao-de-Contedo-eqi2p1',
     },
+    {
+        date: new Date('2026-06-01'),
+        type: TimelineType.Podcast,
+        title: 'Papo de CM com Leticia Leonardo - Construindo comunidade no lugar certo',
+        description: 'Conversa sobre como empresas constroem comunidade no lugar errado, ignorando onde o público está. Discussão sobre ferramentas vs. escuta, e o papel do CM em representar a comunidade para a empresa.',
+        link: 'https://www.linkedin.com/posts/luizheirascommunitymanager_bora-pra-mais-um-papo-de-cm-esse-movimento-share-7455594071496007680-pNr8/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA_rRjIBFSm8zGA0I4IXiE67H1F5u9fSD6A',
+    },
 ];
