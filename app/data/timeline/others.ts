@@ -9,4 +9,12 @@ export const othersData: TimelineItem[] = [
         description: 'Se você quiser apoiar o meu trabalho com open source e criação de conteúdo, pode fazer isso no GitHub 💫',
         link: 'https://github.com/sponsors/levxyca',
     },
+    {
+        date: new Date('2026-05-07'),
+        type: TimelineType.Other,
+        title: 'Coautora do livro DevRel: Guia essencial de Developer Relations',
+        description: 'Lançamento do livro de DevRel, escrito junto com Pachi Parra, sobre como Developer Relations conecta empresas e comunidades técnicas.',
+        link: 'https://www.casadocodigo.com.br/products/livro-devrel',
+        image: '/images/lancamento-livro-devrel.jpg',
+    },
 ];
