@@ -87,7 +87,7 @@ export const podcastsData: TimelineItem[] = [
         link: 'https://creators.spotify.com/pod/show/mocasdaweb/episodes/Episdio-04---Criao-de-Contedo-eqi2p1',
     },
     {
-        date: new Date('2026-06-01'),
+        date: new Date('2026-05-01'),
         type: TimelineType.Podcast,
         title: 'Papo de CM com Leticia Leonardo - Construindo comunidade no lugar certo',
         description: 'Conversa sobre como empresas constroem comunidade no lugar errado, ignorando onde o público está. Discussão sobre ferramentas vs. escuta, e o papel do CM em representar a comunidade para a empresa.',
