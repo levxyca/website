@@ -115,10 +115,10 @@ const Timeline = () => {
                     width={600}
                     height={340}
                     style={{ width: '100%', height: 'auto' }}
-                    loading="lazy"
                     sizes="(max-width: 800px) 100vw, 800px"
                     quality={80}
                     priority={index === 0}
+                    {...(index !== 0 ? { loading: 'lazy' } : {})}
                   />
                 </div>
               )}
