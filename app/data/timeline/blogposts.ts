@@ -3,6 +3,13 @@ import { TimelineType } from './timelineTypes';
 
 export const blogpostsData: TimelineItem[] = [
     {
+        date: new Date('2026-05-13'),
+        type: TimelineType.Article,
+        title: 'Dá para escalar a adoção de IA sem ouvir quem realmente escreve o código?',
+        description: 'Entenda como DevRel transforma a imposição de ferramentas de IA em colaboração real, ouvindo o feedback técnico de quem realmente escreve o código.',
+        link: 'https://www.levxyca.com/blog/escalando-ia-sem-ouvir-quem-escreve-codigo',
+    },
+    {
         date: new Date('2026-04-08'),
         type: TimelineType.Article,
         title: 'DevRel não é marketing: por que o dev não vai te ouvir se não se sentir representado por você?',
