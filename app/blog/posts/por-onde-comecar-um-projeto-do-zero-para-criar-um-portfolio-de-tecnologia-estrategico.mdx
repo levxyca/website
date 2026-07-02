@@ -1,0 +1,34 @@
+---
+title: 'Por onde começar um projeto do ZERO para criar um portfólio de tecnologia estratégico? E como podemos usar IA nesse processo.'
+publishedAt: '2026-07-02'
+summary: 'Descubra um framework prático para começar um projeto do zero, construir um portfólio estratégico e usar IA como parceira no processo.'
+---
+
+Muitas vezes, quando queremos evoluir tecnicamente ou mirar em posições mais seniores, caímos na armadilha de olhar para aqueles roadmaps gigantescos da internet e entrar em paralisia. (Fala sério, você já viu o tamanho do roadmap de DevRel [https://roadmap.sh/devrel](https://roadmap.sh/devrel)? Que é a área que atuo... Me fala se não dá um certo medo de ter que dominar todos esses assuntos...)
+
+E é exatamente isso que acontece, dá uma sensação de que precisamos dominar 50 ferramentas diferentes antes de escrever a primeira linha de código.
+
+Não me leve a mal, eu adoro esses roadmaps, mas eles servem como um guia para te nortear nos estudos, não necessariamente você precisa dominar tudo que está ali.
+
+Recentemente, decidi que o meu próximo nível técnico viria de construir um ecossistema de produto real e documentar as tomadas de decisão. Isso inclusive é algo que já falo desde quando comecei na área de tecnologia. Fazer cursos, aqueles projetinhos copia e cola, tem seu valor, mas chega um certo momento que botar a mão na massa e construir algo real não só vai te motivar mais, como vai ser mais estratégico na hora de usar isso como portfólio e otimizar seus estudos.
+
+**Quando você cria algo real, do zero, usando alguma tecnologia, você consegue demonstrar diversas habilidades em um lugar só**: criatividade, organização, capacidade de pesquisa, criação de análise de requisitos, versionamento de código, planejamento de projeto... enfim, o ciclo todo, não só de desenvolvimento.
+
+Além disso, quando você estuda dessa forma, você vai otimizando o tempo, aprendendo o que é necessário para a construção de um projeto real e já aplicando aquilo enquanto vai aprendendo (que é muitas vezes a vivência que temos quando trabalhamos com desenvolvimento, haha).
+
+Dito isso, para começar essa saga e startar o meu projeto, usei um framework de 4 etapas que quero compartilhar com vocês. **Mas antes... Como eu tive a ideia do projeto? Simples, peguei algo que era um problema para mim e vou construir uma aplicação própria para resolver esse problema**. A ideia não é criar algo inovador e revolucionário, mas sim exercitar a habilidade mais valiosa que temos: resolver problemas!
+
+E o meu problema é: quero cronometrar e ter estatísticas das atividades que faço no dia a dia. E é isso. **Agora vamos para o framework:**
+
+1. **Definição de escopo e regras de negócio (o "o que?"):** antes de abrir o VS Code, desenhei as regras do produto. Estou criando um Time Tracker, mas com desafios reais...isolamento de dados por usuário, travas para garantir apenas um cronômetro ativo por vez e a lógica de, se o usuário deletar uma categoria, o histórico do passado precisa persistir intacto.
+2. **Design da API e contratos (o "como se comunica?"):** mapeei todas as rotas usando as convenções HTTP (GET, POST, PATCH, DELETE) e planejei a paginação e agregação de relatórios por meio de Query Parameters.
+3. **Estratégia incremental (MVP):** em vez de tentar configurar uma infraestrutura complexa de nuvem e banco de dados no "dia um", escolhi começar de forma ágil. A V1 do projeto usará persistência local em um arquivo .json controlado focado em validar as regras de negócio rapidamente. A migração para um banco de dados estruturado ficou planejada para a V2.
+4. **Governança e Docs-as-code (o marco zero):** o código ainda não está buildado, mas o repositório já nasceu com as regras, tabelas de rotas e boas práticas arquiteturais documentadas no README. Afinal, documentação também é entrega técnica.
+
+O resultado desse planejamento virou [o marco zero do meu repositório público.](https://github.com/levxyca/time-tracker-api)
+
+**Mas beleza, Leticia... Onde entrou a Inteligência Artificial nisso tudo?**
+
+Nessa etapa, eu usei o Gemini como um parceiro de pareamento sênior. Nós sentamos para discutir as regras de negócio, validar os contratos das rotas HTTP, debater os problemas de concorrência ao salvar dados em um arquivo local e estruturar a melhor estratégia de banco de dados para a V2. Para fechar, usei o agente do Copilot no VS Code para me ajudar a traduzir esse planejamento técnico em um README limpo e documentado.
+
+Nos próximos dias, vou compartilhar por aqui o meu "diário de bordo" codando essa arquitetura (e as dores de cabeça que com certeza vão aparecer no caminho!). Vem nessa comigo?

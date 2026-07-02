@@ -3,6 +3,13 @@ import { TimelineType } from './timelineTypes';
 
 export const blogpostsData: TimelineItem[] = [
     {
+        date: new Date('2026-07-02'),
+        type: TimelineType.Article,
+        title: 'Por onde começar um projeto do ZERO para criar um portfólio de tecnologia estratégico? E como podemos usar IA nesse processo.',
+        description: 'Descubra um framework prático para começar um projeto do zero, construir um portfólio estratégico e usar IA como parceira no processo.',
+        link: 'https://www.levxyca.com/blog/por-onde-comecar-um-projeto-do-zero-para-criar-um-portfolio-de-tecnologia-estrategico',
+    },
+    {
         date: new Date('2026-05-13'),
         type: TimelineType.Article,
         title: 'Dá para escalar a adoção de IA sem ouvir quem realmente escreve o código?',
